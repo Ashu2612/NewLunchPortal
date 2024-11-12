@@ -1,28 +1,23 @@
 <div>
     <header>
-        <span>Caliber</span>
-        <span>
-            <button>Login</button>
+        <span class="header-top-left">Caliber</span>
+        <span class="header-top-right">
+            <button (click)="openLoginModal()" class="buttonsecondary">Login With Email</button>
         </span>
     </header>
     <section>
-        <div>
-        </div>
-        <div>Log into Caliber Lunch Portal</div>
-        <div>Welcome! Please log in to continue.</div>
-        <div>
-            <button>Login With Microsoft Account</button>
+        <div class="login-body">
+            <div>logo </div>
+            <div>Log into Caliber Lunch Portal</div>
+            <div>Welcome! Please log in to continue.</div>
+            <button (click)="openLoginModal()">Login with Microsoft</button>
+
         </div>
     </section>
     <footer>
-       <div>
-        <span>Caliber logo</span>
-       </div>
-       <div>
         <span>Company</span>
         <span>Product</span>
         <span>Resources</span>
         <span>Follow Us</span>
-       </div>
     </footer>
 </div>
