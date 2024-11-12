@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WimJ6BanvEsmgaC0GT2xpWnjVDBhLVtf+7e4pSRrnVY=",
+  "Source": "CaliberLunchPortalAPI",
+  "BasePath": "_content/CaliberLunchPortalAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
