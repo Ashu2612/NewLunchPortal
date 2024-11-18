@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import Swal from 'sweetalert2';
-//import { LoginModalComponent } from '../login-modal/login-modal.component';
+import { UserDTOService } from '../../Services/user.dto';
 
 @Component({
   selector: 'app-login',
@@ -17,17 +18,17 @@ export class LoginComponent{
 
   private apiUrl = 'https://localhost:7231';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router, private userDTOService: UserDTOService) {
     // Listen for messages from the popup window after it closes
     window.addEventListener('message', (event) => {
       if (event.origin === this.apiUrl) {
           const data = event.data;
-          console.log('Data received from popup:', data);
-  
           setTimeout(() => {
               const userData = this.getUserDataFromCookies();
-              console.log('User Data from Cookies:', userData);
               if (userData.userName) {
+                console.log(userData);
+                userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated);
+            this.router.navigate(['/main-layout']);
                   this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192');
               }
           }, 500); // Delay to ensure cookies are set before fetching them
@@ -56,12 +57,6 @@ export class LoginComponent{
       const checkPopupClosed = setInterval(() => {
         if (popupWindow.closed) {
           clearInterval(checkPopupClosed);
-          console.log('Popup window closed');
-          // Optionally, you can fetch user data from cookies here if needed
-          const userData = this.getUserDataFromCookies();
-          if (userData.userName) {
-            this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192');
-          }
         }
       }, 1000);
     } else {
@@ -69,28 +64,16 @@ export class LoginComponent{
     }
   }
   
-  fetchUserData() {
-    console.log('Fetching user data...');
-   this.http.get<any>(`${this.apiUrl}/identity/userdto`, { withCredentials: true }).subscribe(
-    (data) => {
-      if (!data.isAuthenticated) {
-        this.showToastAlert(`Logged in as ${data.userName}`, '#5ad192');
-      } else {
-        this.showToastAlert('Authentication Failed!', '#f55427');
-      }
-    },
-    (error) => {
-      console.error('Error fetching user data:', error);
-      Swal.fire('Error', 'Could not retrieve user data', 'error');
-    }
-   );
-  }
   getUserDataFromCookies(): any {
-    const userName = this.getCookie('UserName');
-    const userEmail = this.getCookie('UserEmail');
-    console.log('UserName from cookies:', userName);  // Debug log
-    console.log('UserEmail from cookies:', userEmail);  // Debug log
-    return { userName, userEmail };
+    let userName = this.getCookie('UserName');
+    let userEmail = this.getCookie('UserEmail');
+    let isAuthenticated = 'true';
+
+    // Decode the values to handle special characters and spaces
+    if (userName) userName = decodeURIComponent(userName);
+    if (userEmail) userEmail = decodeURIComponent(userEmail);
+
+    return { isAuthenticated, userName, userEmail };
 }
 
 getCookie(name: string): string | null {
@@ -98,11 +81,11 @@ getCookie(name: string): string | null {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) {
         const cookieValue = parts.pop()?.split(';').shift() || null;
-        console.log(`${name} cookie value:`, cookieValue);  // Debug log
         return cookieValue;
     }
     return null;
 }
+
 showToastAlert(message:string, alertColor:string) {
   Swal.fire({
     title: message,

@@ -85,3 +85,11 @@ footer {
     letter-spacing: 0.13px;
     color: var(--cornflower);
   }
+  .top-menu{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .menus-small{
+    font-size: 13px;
+  }

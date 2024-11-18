@@ -44,7 +44,9 @@ namespace CaliberLunchPortalAPI.Controllers
                     Expires = DateTimeOffset.UtcNow.AddDays(1)
                 });
 
-                var script = $@"
+                if (User.Identity.IsAuthenticated)
+                {
+                    var script = $@"
             <script>
                 if (window.opener) {{
                     window.opener.postMessage({{
@@ -56,7 +58,28 @@ namespace CaliberLunchPortalAPI.Controllers
                 window.close();
             </script>";
 
-                return Content(script, "text/html");
+                    return Content(script, "text/html");
+
+                }
+                else
+                {
+                    var script = $@"
+            <script>
+                if (window.opener) {{
+                    window.opener.postMessage({{
+                        IsAuthenticated: false,
+                        UserName: '{userName}',
+                        UserEmail: '{userEmail}'
+                    }}, '*');
+                }}
+                window.close();
+            </script>";
+
+                    return Content(script, "text/html");
+
+                }
+
+
             }
 
             return Content("<script>window.close();</script>", "text/html");
