@@ -29,6 +29,25 @@
         </a>
       </li>
     </ul>
+    <div class="avatar-container" >
+      <!-- Avatar Image -->
+      <div class="avatar">
+        <img [src]="'data:image/jpeg;base64,' + userPicture" alt="User Profile Picture" />
+        <div class="badge"></div>
+      </div>
+    
+      <!-- User Info -->
+      <div class="user-info">
+        <div class="username" [title]="userName">{{ userName }}</div>
+        <div class="email" [title]="userEmail">{{ userEmail }}</div>
+      </div>
+    
+      <!-- Settings Icon -->
+      <div class="settings-icon">
+        <span class="material-symbols-outlined" (click)="LogOut()">logout</span>
+      </div>
+    </div>
+    
   </nav>
 
   <!-- Main Content -->

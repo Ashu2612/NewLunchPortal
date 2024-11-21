@@ -14,14 +14,16 @@ export class UserDTOService {
     }
   
     // Method to get user data from session storage
-    getUserData(): { userName: string | null, userEmail: string | null, isAuthenticated: boolean } {
+    getUserData(): { userName: string | null, userEmail: string | null, userPicture: string | null, isAuthenticated: boolean } {
       const userName = sessionStorage.getItem('userName');
       const userEmail = sessionStorage.getItem('userEmail');
+      const userPicture = sessionStorage.getItem('userPicture');
       const isAuthenticated = this.isAuthenticated();
   
       return {
         userName: userName ? decodeURIComponent(userName) : null,
         userEmail: userEmail ? decodeURIComponent(userEmail) : null,
+        userPicture: userPicture ? decodeURIComponent(userPicture) : null,
         isAuthenticated: isAuthenticated
       };
     }

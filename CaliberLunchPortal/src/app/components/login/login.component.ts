@@ -23,11 +23,9 @@ export class LoginComponent{
     window.addEventListener('message', (event) => {
       if (event.origin === this.apiUrl) {
           const data = event.data;
-          console.log(data);
           setTimeout(() => {
               const userData = this.getUserDataFromCookies();
               if (userData.userName) {
-                console.log(userData);
                 userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
             this.router.navigate(['/main-layout']);
                   this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192');
@@ -38,7 +36,7 @@ export class LoginComponent{
   }
   // Open a new window on top of the current window
   openLoginModal() {
-    const popupWidth = 600;
+    const popupWidth = 630;
     const popupHeight = 400;
     const leftPosition = (window.screen.width - popupWidth) / 2;
     const topPosition = (window.screen.height - popupHeight) / 2;

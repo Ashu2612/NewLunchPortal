@@ -102,6 +102,8 @@ footer {
     gap: 8px;
     font-family: 'Inter', sans-serif;
     color: #4f5e6d !important;
+    height: 100vh; /* Full screen height */
+    box-sizing: border-box;
   }
   
   /* Side Menu List */
@@ -189,4 +191,77 @@ footer {
     background-color: #CED0F8; /* Primary background */
     border-radius: 4px;
   }
-    
+  .avatar-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFFFFFFF;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background: #CED0F8FF; /* Light primary background color */
+    border-radius: 22px; /* Make it circular */
+    overflow: hidden;
+    margin-right: 12px;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* User info section */
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Allows this section to take up available space */
+    overflow: hidden;
+    max-width: calc(100% - 70px); /* Ensure that the user info doesn't overflow the container */
+  }
+  
+  .user-info .username,
+  .user-info .email {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    white-space: normal;  /* Allow text to wrap */
+    overflow: hidden;  /* Hide overflowed text */
+    text-overflow: ellipsis;  /* Add ellipsis (...) for overflowed text */
+    word-wrap: break-word; /* Ensure words break properly */
+  }
+  
+  .user-info .username {
+    font-weight: bold;
+    max-width: 100%; /* Allow username to take full width available */
+  }
+  
+  .user-info .email {
+    color: #777;
+    max-width: 100%; /* Allow email to take full width available */
+    margin-top: 5px; /* Add some spacing between username and email */
+  }
+  
+  .settings-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #4f5e6d;
+    margin-left: 12px;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .settings-icon:hover {
+    color: #bdcad9; /* Change color on hover */
+  }
+  
