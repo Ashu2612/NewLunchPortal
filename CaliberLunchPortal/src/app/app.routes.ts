@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { LoginComponent } from './Component/login/login.component';
-import { MainLayoutComponent } from './Component/main-layout/main-layout.component';
-import { HomeComponent } from './Component/home/home.component';
-import { AboutComponent } from './Component/about/about.component';
-import { ContactComponent } from './Component/contact/contact.component';
+import { LoginComponent } from './components/login/login.component';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [

@@ -27,10 +27,11 @@ export class UserDTOService {
     }
   
     // Method to store user data in session storage
-    storeUserData(userName: string, userEmail: string, isAuthenticated : any): void {
+    storeUserData(userName: string , userEmail: string, isAuthenticated : any, userPicture : any): void {
         sessionStorage.setItem('isAuthenticated', isAuthenticated);
         sessionStorage.setItem('userName', userName);
         sessionStorage.setItem('userEmail', userEmail);
+        sessionStorage.setItem('userPicture', userPicture);
       }
   
     clearAllCookies() {
