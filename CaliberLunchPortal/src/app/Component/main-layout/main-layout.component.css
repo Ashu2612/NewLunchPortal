@@ -1,4 +1,14 @@
+/* Layout structure */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+
+/* Main Content styling */
 .content {
-    padding: 2rem;
-  }
-  
+  flex: 1;
+  padding: 20px;
+  background-color: #FFFFFFFF;
+  overflow-y: auto;
+}

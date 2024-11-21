@@ -5,7 +5,7 @@ import { MainLayoutComponent } from './Component/main-layout/main-layout.compone
 import { HomeComponent } from './Component/home/home.component';
 import { AboutComponent } from './Component/about/about.component';
 import { ContactComponent } from './Component/contact/contact.component';
-import { AuthGuard } from './Guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/main-layout', pathMatch: 'full' }, // Default route redirect

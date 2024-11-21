@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import Swal from 'sweetalert2';
-import { UserDTOService } from '../../Services/user.dto';
+import { UserDTOService } from '../../services/user.dto';
 
 @Component({
   selector: 'app-login',

@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TopBarComponent } from '../top-bar/top-bar.component';
+import { AuthGuard } from '../../guards/auth.guard';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [RouterModule, TopBarComponent],
-  template: `
-  <app-top-bar></app-top-bar>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-`,
+  imports: [RouterModule],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css'
 })
 export class MainLayoutComponent {
-
+  constructor (private authGuard: AuthGuard){
+    
+  }
+  LogOut(){
+    this.authGuard.logOut();
+  }
 }

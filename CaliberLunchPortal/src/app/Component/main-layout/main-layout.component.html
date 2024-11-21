@@ -1,4 +1,38 @@
-<app-top-bar></app-top-bar>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="layout">
+  <!-- Side Menu -->
+  <nav class="side-menu">
+    <ul>
+      <label routerLink="home" routerLinkActive="active" class="side-menu-logo">CaliberLunchPortal</label>
+
+      <li>
+        <a routerLink="home" routerLinkActive="active">
+          <span class="material-symbols-outlined">home_app_logo</span>
+          Home
+        </a>
+      </li>
+      <li>
+        <a routerLink="about" routerLinkActive="active">
+          <span class="material-symbols-outlined">info</span>
+          About
+        </a>
+      </li>
+      <li>
+        <a routerLink="contact" routerLinkActive="active">
+          <span class="material-symbols-outlined">contact_mail</span>
+          Contact
+        </a>
+      </li>
+      <li>
+        <a (click)="LogOut()">
+          <span class="material-symbols-outlined">logout</span>
+          Logout
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
