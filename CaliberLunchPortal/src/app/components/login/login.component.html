@@ -1,6 +1,8 @@
 <div class="container">
     <header class="header">
-        <span class="header-logo">Logo</span>
+        <span class="header-logo">
+            <img src="/assets/images/logo_caliber_horizontal.png">
+        </span>
         <span class="header-login">
             <button class="button-secondary" (click)="openLoginModal()">Login With Email</button>
         </span>
@@ -11,12 +13,20 @@
         </div>
         <div class="center-content">
             <div class="logo">
-                <video #animationVideo id="animation-video"  autoplay muted loop playsinline>
-                    <source src="assets/images/logo_animation.mp4" type="video/mp4">
+                <video #animationVideo id="animation-video"  autoplay muted loop playsinline disablePictureInPicture="true">
+                    <source src="assets/animations/logo_animation.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="welcome-text">Welcome! Please log in to continue.</div>
-            <button class="button-primary" (click)="openLoginModal()">Login with Microsoft Account</button>
+            <button class="btn btn-white mt-4 border comLogbtn px-2 py-2 mt-5" (click)="openLoginModal()">
+                <span class="px-2 pb-1px">
+                    <img src="/assets/images/microsoft.png" width="20" height="20" alt="Microsoft Logo">
+                </span>
+                <span class="px-1 font-size-17">
+                    Sign-in with Microsoft Account
+                </span>
+            </button>
+            
         </div>
         <div class="image-right">
             <img src="assets/images/711e3a98-83d8-42c0-8409-10f0575ef96b.svg" alt="Illustration 2">

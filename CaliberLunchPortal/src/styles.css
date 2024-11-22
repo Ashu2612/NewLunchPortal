@@ -64,21 +64,30 @@ footer {
   top: 10px;
 }
 
-.header-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.header-logo img {
+  max-width: 150px; /* Adjust logo width */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.header-login .button-secondary {
+.header-logo img:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.button-secondary {
   background-color: #ffffff;
-  border: 1px solid #ccc;
+  border: 1px solid #cfd9e2;
   padding: 10px 20px;
+  color: #6682fb;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .button-secondary:hover {
-  background-color: #eaeaea;
+  border: 1px solid #b3c0fd;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f7f9ff;
 }
 
 /* Main content styles */
@@ -108,7 +117,7 @@ footer {
 .center-content {
   text-align: center;
   max-width: 400px;
-  margin: 0 auto;
+  margin-bottom: 250px;
   padding: 20px;
 }
 
@@ -134,7 +143,7 @@ footer {
 }
 
 .button-primary {
-  background-color: #0078d4;
+  background-color: #6682fb;
   color: #ffffff;
   padding: 12px 24px;
   border: none;
@@ -144,7 +153,7 @@ footer {
 }
 
 .button-primary:hover {
-  background-color: #005a9e;
+  background-color: #5870db;
 }
 
 /* Adjust image positions */

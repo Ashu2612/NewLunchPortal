@@ -1,0 +1,26 @@
+/* Style the button similar to the anchor tag */
+.comLogbtn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px; 
+  transition: background-color 0.3s ease;
+}
+  
+.comLogbtn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Optional: adjust the logo and text spacing */
+.comLogbtn img {
+  margin-right: 10px;
+}
+
+.comLogbtn .font-size-17 {
+  font-size: 15 px;
+}

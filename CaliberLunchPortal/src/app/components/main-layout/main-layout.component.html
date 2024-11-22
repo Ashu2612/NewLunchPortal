@@ -23,7 +23,7 @@
         </a>
       </li>
       <li>
-        <a (click)="LogOut()">
+        <a (click)="LogOut()" style="cursor:pointer;">
           <span class="material-symbols-outlined">logout</span>
           Logout
         </a>
@@ -38,8 +38,8 @@
     
       <!-- User Info -->
       <div class="user-info">
-        <div class="username" [title]="userName">{{ userName }}</div>
-        <div class="email" [title]="userEmail">{{ userEmail }}</div>
+        <div class="username" [title]="userNameFull">{{ userName }}</div>
+        <div class="email" [title]="userEmailFull">{{ userEmail }}</div>
       </div>
     
       <!-- Settings Icon -->

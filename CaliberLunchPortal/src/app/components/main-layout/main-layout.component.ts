@@ -14,10 +14,15 @@ export class MainLayoutComponent {
   userPicture: string = ''; 
   userName: string = ''; // Store the user's name
   userEmail: string = ''; // Store the user's email
+  userNameFull: string = ''; // Store the user's email
+  userEmailFull: string = ''; // Store the user's email
   constructor (private authGuard: AuthGuard, private userDTOService: UserDTOService){
     var userDto = this.userDTOService.getUserData();
     this.userPicture = userDto.userPicture || '';
     // Check if the userName exceeds 11 characters
+    this.userNameFull = userDto.userName || '';
+    this.userEmailFull = userDto.userEmail || '';
+    
     this.userName = this.formatString(userDto.userName || '');
 
     // Check if the userEmail exceeds 11 characters
