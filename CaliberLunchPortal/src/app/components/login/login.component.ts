@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -14,7 +14,7 @@ import { UserDTOService } from '../../services/user.dto';
   styleUrl: './login.component.css'
 })
 
-export class LoginComponent{
+export class LoginComponent implements AfterViewInit{
 
   private apiUrl = 'https://localhost:7231';
 
@@ -34,6 +34,18 @@ export class LoginComponent{
       }
     });
   }
+  ngAfterViewInit() {
+    const video = document.getElementById('animation-video') as HTMLVideoElement;
+    if (video) {
+      video.muted = true; // Ensure the video is muted for autoplay
+      video.playbackRate = 1.8;
+      video.play().catch((error) => {
+        console.error('Autoplay failed:', error);
+      });
+    } else {
+      console.error('Video element not found');
+    }
+}
   // Open a new window on top of the current window
   openLoginModal() {
     const popupWidth = 630;

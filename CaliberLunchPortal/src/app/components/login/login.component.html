@@ -1,23 +1,25 @@
-<div>
-    <header>
-        <span class="header-top-left">Caliber</span>
-        <span class="header-top-right">
-            <button (click)="openLoginModal()" class="buttonsecondary">Login With Email</button>
+<div class="container">
+    <header class="header">
+        <span class="header-logo">Logo</span>
+        <span class="header-login">
+            <button class="button-secondary" (click)="openLoginModal()">Login With Email</button>
         </span>
     </header>
-    <section>
-        <div class="login-body">
-            <div>logo </div>
-            <div>Log into Caliber Lunch Portal</div>
-            <div>Welcome! Please log in to continue.</div>
-            <button (click)="openLoginModal()">Login with Microsoft</button>
-
+    <section class="main-content">
+        <div class="image-left">
+            <img src="assets/images/2bf2733f-55cd-40e5-8b34-d8abc70807d6.svg" alt="Illustration 1">
+        </div>
+        <div class="center-content">
+            <div class="logo">
+                <video #animationVideo id="animation-video"  autoplay muted loop playsinline>
+                    <source src="assets/images/logo_animation.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="welcome-text">Welcome! Please log in to continue.</div>
+            <button class="button-primary" (click)="openLoginModal()">Login with Microsoft Account</button>
+        </div>
+        <div class="image-right">
+            <img src="assets/images/711e3a98-83d8-42c0-8409-10f0575ef96b.svg" alt="Illustration 2">
         </div>
     </section>
-    <footer>
-        <span>Company</span>
-        <span>Product</span>
-        <span>Resources</span>
-        <span>Follow Us</span>
-    </footer>
 </div>
