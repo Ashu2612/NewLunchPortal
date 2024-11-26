@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { AuthGuard } from '../../guards/auth.guard';
 import { UserDTOService } from '../../services/user.dto';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css'
 })
@@ -35,6 +36,12 @@ export class MainLayoutComponent {
       return input.slice(0, 15) + '..';  // Take first 10 characters and append '...'
     }
     return input;  // Return the original string if it's within the limit
+  }
+
+  isDropdownOpen = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
 
   LogOut(){

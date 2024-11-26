@@ -9,27 +9,28 @@
     </header>
     <section class="main-content">
         <div class="image-left">
-            <img src="assets/images/2bf2733f-55cd-40e5-8b34-d8abc70807d6.svg" alt="Illustration 1">
+            <img src="assets/images/c687ce82-306b-4d3d-a597-962cb88b54c2.svg" alt="Illustration 1">
         </div>
-        <div class="center-content">
-            <div class="logo">
-                <video #animationVideo id="animation-video"  autoplay muted loop playsinline disablePictureInPicture="true">
-                    <source src="assets/animations/logo_animation.mp4" type="video/mp4">
-                </video>
+        <div class="card-container">
+            <div class="center-content">
+                <div class="logo">
+                    <video #animationVideo id="animation-video" autoplay muted playsinline disablePictureInPicture="true">
+                        <source src="assets/animations/logo_animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="welcome-text">Welcome! Please log in to continue.</div>
+                <button class="btn btn-white mt-4 border comLogbtn px-2 py-2 mt-5" (click)="openLoginModal()">
+                    <span class="px-2 pb-1px">
+                        <img src="/assets/images/microsoft.png" width="20" height="20" alt="Microsoft Logo">
+                    </span>
+                    <span class="px-1 font-size-17">
+                        Sign-in with Microsoft Account
+                    </span>
+                </button>
             </div>
-            <div class="welcome-text">Welcome! Please log in to continue.</div>
-            <button class="btn btn-white mt-4 border comLogbtn px-2 py-2 mt-5" (click)="openLoginModal()">
-                <span class="px-2 pb-1px">
-                    <img src="/assets/images/microsoft.png" width="20" height="20" alt="Microsoft Logo">
-                </span>
-                <span class="px-1 font-size-17">
-                    Sign-in with Microsoft Account
-                </span>
-            </button>
-            
-        </div>
+        </div>        
         <div class="image-right">
-            <img src="assets/images/711e3a98-83d8-42c0-8409-10f0575ef96b.svg" alt="Illustration 2">
+            <img src="assets/images/4cbe70df-55f5-4d92-986b-49fd53afc721.svg" alt="Illustration 2">
         </div>
     </section>
 </div>

@@ -23,6 +23,34 @@
         </a>
       </li>
       <li>
+        <a (click)="toggleDropdown()" style="cursor:pointer;">
+          <span class="material-symbols-outlined">passkey</span>
+          Admin
+          <span class="material-symbols-outlined dropdown-icon" [class.rotate]="isDropdownOpen">arrow_drop_down</span>
+        </a>
+        <!-- Submenus -->
+        <ul class="submenu" *ngIf="isDropdownOpen">
+          <li>
+            <a routerLink="submenu4" routerLinkActive="active">
+              <span class="material-symbols-outlined">dinner_dining</span>
+              Orders
+            </a>
+          </li>
+          <li>
+            <a routerLink="submenu1" routerLinkActive="active">
+              <span class="material-symbols-outlined">captive_portal</span>
+              Site Settings
+            </a>
+          </li>
+          <li>
+            <a routerLink="submenu2" routerLinkActive="active">
+              <span class="material-symbols-outlined">manage_accounts</span>
+              User Management
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
         <a (click)="LogOut()" style="cursor:pointer;">
           <span class="material-symbols-outlined">logout</span>
           Logout

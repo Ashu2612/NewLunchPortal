@@ -102,9 +102,15 @@ footer {
 }
 
 /* Image styles */
-.image-left,
+.image-left{
+  width: 30%;
+  margin-left: -10vh;
+}
+
 .image-right {
   width: 30%;
+  margin-right: -10vh !important;
+  margin-top: 10vh;
 }
 
 .image-left img,
@@ -113,11 +119,22 @@ footer {
   height: auto;
   max-height: calc(100vh - 100px); /* Ensures images fit within the viewport */
 }
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 500px;
+  max-height: 300px;
+  margin-bottom: 150px;
+  border-radius: 10px;
+  background-color: #fff; /* Card background color */
+ box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
 
 .center-content {
-  text-align: center;
   max-width: 400px;
-  margin-bottom: 250px;
   padding: 20px;
 }
 
