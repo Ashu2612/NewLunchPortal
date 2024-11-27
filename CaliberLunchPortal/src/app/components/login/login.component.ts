@@ -38,7 +38,7 @@ export class LoginComponent implements AfterViewInit{
     const video = document.getElementById('animation-video') as HTMLVideoElement;
     if (video) {
       video.muted = true; // Ensure the video is muted for autoplay
-      video.playbackRate = 1.8;
+      video.playbackRate = 2;
       video.play().catch((error) => {
         console.error('Autoplay failed:', error);
       });

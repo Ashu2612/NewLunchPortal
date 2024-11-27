@@ -44,6 +44,11 @@ export class MainLayoutComponent {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
+ isSidebarCollapsed = false;
+
+  toggleSidebar() {
+    this.isSidebarCollapsed = !this.isSidebarCollapsed;
+  }
   LogOut(){
     this.authGuard.logOut();
   }
