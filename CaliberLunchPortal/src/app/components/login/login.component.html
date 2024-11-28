@@ -2,19 +2,22 @@
     <div class="overlay animate-delay" *ngIf="showSignUpModal"></div>
     <div class="signup-container animate-delay" *ngIf="showSignUpModal">
         <div class="signup-container-form">
+            <button class="close-btn" (click)="closeModal()">×</button>
     <label class="header-form">New User Sign Up</label>
+<div >
     <div class="textbox">
         <label class="label" for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" [value]="newUserName" disabled="true">
+      </div>
+      <div class="textbox">
+        <label class="label" for="email">Email</label>
+        <input type="email" [value]="newEmailId" value="" disabled="true">
       </div>
       <div class="textbox">
         <label class="label" for="employee-id">Employee ID</label>
         <input type="text" id="employee-id" placeholder="Enter your employee ID">
       </div>
-      <div class="textbox">
-        <label class="label" for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email">
-      </div>
+</div>
       <button class="sign-up-button">Sign Up</button>
         </div>
         <div class="signup-container-img">

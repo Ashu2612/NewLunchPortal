@@ -18,8 +18,12 @@ import { UserDTOService } from '../../services/user.dto';
 export class LoginComponent implements AfterViewInit{
 
   private apiUrl = 'https://localhost:7231';
-  showSignUpModal = false;
-
+  showSignUpModal = true;
+  newUserName = "";
+  newEmailId = "";
+  closeModal(){
+    this.showSignUpModal = !this.showSignUpModal;
+  }
   constructor(private http: HttpClient, private router: Router, private userDTOService: UserDTOService) {
     // Listen for messages from the popup window after it closes
     window.addEventListener('message', (event) => {
@@ -28,6 +32,8 @@ export class LoginComponent implements AfterViewInit{
           setTimeout(() => {
               const userData = this.getUserDataFromCookies();
               if (userData.isAuthenticated === 'true') {
+                this.newUserName = userData.userName;
+                this.newEmailId = userData.userEmail;
                 if(userData.userExists === 'true'){
                   userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
                   this.router.navigate(['/main-layout']);
