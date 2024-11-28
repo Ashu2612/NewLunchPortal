@@ -22,33 +22,97 @@
           </a>
         </li>
         <li>
-          <a routerLink="about" routerLinkActive="active">
-            <span class="material-symbols-outlined">info</span>
-            <span *ngIf="!isSidebarCollapsed">About</span>
-          </a>
-        </li>
-        <li>
-          <a routerLink="contact" routerLinkActive="active">
-            <span class="material-symbols-outlined">contact_mail</span>
-            <span *ngIf="!isSidebarCollapsed">Contact</span>
-          </a>
-        </li>
-        <li>
-          <a (click)="toggleDropdown()" style="cursor:pointer;">
-            <span class="material-symbols-outlined">passkey</span>
-            <span *ngIf="!isSidebarCollapsed">Admin</span>
+          <a (click)="toggleRequestDropdown()" style="cursor:pointer;">
+            <span class="material-symbols-outlined">inventory</span>
+            <span *ngIf="!isSidebarCollapsed">Request</span>
             <span
               class="material-symbols-outlined dropdown-icon"
-              [class.rotate]="isDropdownOpen"
+              [class.rotate]="isRequestDropdownOpen"
               >arrow_drop_down</span
             >
           </a>
           <!-- Submenus -->
-          <ul class="submenu" *ngIf="isDropdownOpen">
+          <ul class="submenu" *ngIf="isRequestDropdownOpen">
             <li>
               <a routerLink="submenu4" routerLinkActive="active">
                 <span class="material-symbols-outlined">dinner_dining</span>
-                <span *ngIf="!isSidebarCollapsed">Lunch Orders</span>
+                <span *ngIf="!isSidebarCollapsed">Lunch</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="submenu2" routerLinkActive="active">
+                <span class="material-symbols-outlined">edit_document</span>
+                <span *ngIf="!isSidebarCollapsed">Office Supplies</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="submenu2" routerLinkActive="active">
+                <span class="material-symbols-outlined">local_taxi</span>
+                <span *ngIf="!isSidebarCollapsed">Cab</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="submenu1" routerLinkActive="active">
+                <span class="material-symbols-outlined">sim_card</span>
+                <span *ngIf="!isSidebarCollapsed">Sim Card</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="submenu2" routerLinkActive="active">
+                <span class="material-symbols-outlined">id_card</span>
+                <span *ngIf="!isSidebarCollapsed">Business Card</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a (click)="toggleComplaintDropdown()" style="cursor:pointer;">
+            <span class="material-symbols-outlined">support_agent</span>
+            <span *ngIf="!isSidebarCollapsed">Operational Support</span>
+            <span
+              class="material-symbols-outlined dropdown-icon"
+              [class.rotate]="isComplaintDropdownOpen"
+              >arrow_drop_down</span
+            >
+          </a>
+          <!-- Submenus -->
+          <ul class="submenu" *ngIf="isComplaintDropdownOpen">
+            <li>
+              <a routerLink="submenu4" routerLinkActive="active">
+                <span class="material-symbols-outlined">water_full</span>
+                <span *ngIf="!isSidebarCollapsed">Drinking Water</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="submenu2" routerLinkActive="active">
+                <span class="material-symbols-outlined">wc</span>
+                <span *ngIf="!isSidebarCollapsed">Restroom</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="submenu2" routerLinkActive="active">
+                <span class="material-symbols-outlined">ac_unit</span>
+                <span *ngIf="!isSidebarCollapsed">Air Conditioner</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a (click)="toggleAdminDropdown()" style="cursor:pointer;">
+            <span class="material-symbols-outlined">passkey</span>
+            <span *ngIf="!isSidebarCollapsed">Admin</span>
+            <span
+              class="material-symbols-outlined dropdown-icon"
+              [class.rotate]="isAdminDropdownOpen"
+              >arrow_drop_down</span
+            >
+          </a>
+          <!-- Submenus -->
+          <ul class="submenu" *ngIf="isAdminDropdownOpen">
+            <li>
+              <a routerLink="submenu4" routerLinkActive="active">
+                <span class="material-symbols-outlined">receipt_long</span>
+                <span *ngIf="!isSidebarCollapsed">Requests</span>
               </a>
             </li>
             <li>
@@ -66,31 +130,44 @@
           </ul>
         </li>
         <li>
+          <a routerLink="myAccount" routerLinkActive="active">
+            <span class="material-symbols-outlined">person</span>
+            <span *ngIf="!isSidebarCollapsed">Me</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="about" routerLinkActive="active">
+            <span class="material-symbols-outlined">info</span>
+            <span *ngIf="!isSidebarCollapsed">About</span>
+          </a>
+        </li>
+        <li>
           <a (click)="LogOut()" style="cursor:pointer;">
             <span class="material-symbols-outlined">logout</span>
             <span *ngIf="!isSidebarCollapsed">Logout</span>
           </a>
         </li>
       </ul>
-      <div class="avatar-container" >
-        <!-- Avatar Image -->
-        <div class="avatar">
-          <img [src]="'data:image/jpeg;base64,' + userPicture" alt="User Profile Picture" />
-          <div class="badge"></div>
-        </div>
       
-        <!-- User Info -->
-        <div class="user-info"  *ngIf="!isSidebarCollapsed">
-          <div class="username" [title]="userNameFull">{{ userName }}</div>
-          <div class="email" [title]="userEmailFull">{{ userEmail }}</div>
-        </div>
-      
-        <!-- Settings Icon -->
-        <div class="logout-icon" *ngIf="!isSidebarCollapsed">
-          <span class="material-symbols-outlined" (click)="LogOut()">logout</span>
-        </div>
-      </div>
     </nav>
+    <div class="avatar-container" >
+      <!-- Avatar Image -->
+      <div class="avatar ">
+        <img [src]="'data:image/jpeg;base64,' + userPicture" alt="User Profile Picture" />
+        <div class="badge"></div>
+      </div>
+    
+      <!-- User Info -->
+      <div class="user-info animate-delay"  *ngIf="!isSidebarCollapsed">
+        <div class="username" [title]="userNameFull">{{ userName }}</div>
+        <div class="email" [title]="userEmailFull">{{ userEmail }}</div>
+      </div>
+    
+      <!-- Settings Icon -->
+      <div class="logout-icon animate-delay" *ngIf="!isSidebarCollapsed">
+        <span class="material-symbols-outlined" (click)="LogOut()">logout</span>
+      </div>
+    </div>
    </div>
   
 

@@ -38,10 +38,22 @@ export class MainLayoutComponent {
     return input;  // Return the original string if it's within the limit
   }
 
-  isDropdownOpen = false;
+  isAdminDropdownOpen = false;
 
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
+  toggleAdminDropdown() {
+    this.isAdminDropdownOpen = !this.isAdminDropdownOpen;
+  }
+
+  isRequestDropdownOpen = false;
+
+  toggleRequestDropdown() {
+    this.isRequestDropdownOpen = !this.isRequestDropdownOpen;
+  }
+
+  isComplaintDropdownOpen = false;
+
+  toggleComplaintDropdown() {
+    this.isComplaintDropdownOpen = !this.isComplaintDropdownOpen;
   }
 
  isSidebarCollapsed = false;

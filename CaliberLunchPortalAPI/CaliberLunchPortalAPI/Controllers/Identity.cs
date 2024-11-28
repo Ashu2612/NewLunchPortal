@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Azure.Identity;
 using Microsoft.Graph;
+using CaliberLunchPortalAPI.DBContext;
+using CaliberLunchPortalAPI.Utilities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CaliberLunchPortalAPI.Controllers
 {
@@ -11,11 +14,15 @@ namespace CaliberLunchPortalAPI.Controllers
     [Route("[controller]")]
     public class Identity : Controller
     {
+        private readonly ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IGraphAPICalls _graphAPICalls;
 
-        public Identity(IConfiguration configuration)
+        public Identity(IConfiguration configuration, ApplicationDbContext context, IGraphAPICalls graphAPICalls)
         {
             _configuration = configuration;
+            _context = context;
+            _graphAPICalls = graphAPICalls;
         }
 
         [HttpGet("LoginWithMicrosoftAccount")]
@@ -36,6 +43,7 @@ namespace CaliberLunchPortalAPI.Controllers
             {
                 string userName = User.Identity.Name;
                 string userEmail = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+                var userExists = await _context.UsersModel.AnyAsync(user => user.Email == userEmail);
 
                 // Store session data in cookies
                 Response.Cookies.Append("UserName", userName, new CookieOptions
@@ -43,27 +51,41 @@ namespace CaliberLunchPortalAPI.Controllers
                     HttpOnly = false,  // Do not set HttpOnly if you need access from JavaScript
                     Secure = true,
                     SameSite = SameSiteMode.Strict,
-                    Expires = DateTimeOffset.UtcNow.AddDays(1)
+                    Expires = DateTimeOffset.UtcNow.AddSeconds(20)
                 });
                 Response.Cookies.Append("UserEmail", userEmail, new CookieOptions
                 {
                     HttpOnly = false,  // Same here
                     Secure = true,
                     SameSite = SameSiteMode.Strict,
-                    Expires = DateTimeOffset.UtcNow.AddDays(1)
+                    Expires = DateTimeOffset.UtcNow.AddSeconds(20)
+                });
+                Response.Cookies.Append("IsAuthenticated", User.Identity.IsAuthenticated.ToString().ToLower(), new CookieOptions
+                {
+                    HttpOnly = false,  // Same here
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTimeOffset.UtcNow.AddSeconds(20)
+                });
+                Response.Cookies.Append("UserExists", userExists.ToString().ToLower(), new CookieOptions
+                {
+                    HttpOnly = false,  // Same here
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTimeOffset.UtcNow.AddSeconds(20)
                 });
 
-                if (User.Identity.IsAuthenticated)
-                {
-                    var base64Picture = await GetUserPicAsync();
+
+                    var base64Picture = await _graphAPICalls.GetUserPicAsync();
 
                     var script = $@"
 <script>
     if (window.opener) {{
         window.opener.postMessage({{
-            IsAuthenticated: true,
+            IsAuthenticated:  {User.Identity.IsAuthenticated.ToString().ToLower()},
             UserName: '{userName}',
-            UserEmail: '{userEmail}',
+            UserEmail: '{userEmail}', 
+            UserExists: '{userExists.ToString().ToLower()}',
             UserPicture: '{base64Picture}'
         }}, '*');
 
@@ -76,26 +98,6 @@ namespace CaliberLunchPortalAPI.Controllers
                     return Content(script, "text/html");
 
                 }
-                else
-                {
-                    var script = $@"
-            <script>
-                if (window.opener) {{
-                    window.opener.postMessage({{
-                        IsAuthenticated: false,
-                        UserName: '{userName}',
-                        UserEmail: '{userEmail}'
-                    }}, '*');
-                }}
-                window.close();
-            </script>";
-
-                    return Content(script, "text/html");
-
-                }
-
-
-            }
 
             return Content("<script>window.close();</script>", "text/html");
         }
@@ -116,43 +118,6 @@ namespace CaliberLunchPortalAPI.Controllers
 
             return Ok(userDto);
         }
-        private async Task<string> GetUserPicAsync()
-        {
-            // Read credentials from appsettings
-            var clientId = _configuration["Authentication:Microsoft:ClientId"];
-            var tenantId = _configuration["Authentication:Microsoft:TenantId"];
-            var clientSecret = _configuration["Authentication:Microsoft:ClientSecret"];
-
-            // Authenticate and create Graph client
-            var options = new TokenCredentialOptions { AuthorityHost = AzureAuthorityHosts.AzurePublicCloud };
-            var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret, options);
-            var graphClient = new GraphServiceClient(clientSecretCredential, new[] { "https://graph.microsoft.com/.default" });
-
-            try
-            {
-                // Get profile picture for the specified user
-                var photoStream = await graphClient.Users["ashutosh.bs@caliberuniversal.com"].Photo.Content.GetAsync();
-
-                if (photoStream == null)
-                {
-                    // Return a placeholder Base64 string for missing profile picture
-                    return "";
-                }
-
-                // Convert photo stream to Base64 string
-                using (var memoryStream = new MemoryStream())
-                {
-                    await photoStream.CopyToAsync(memoryStream);
-                    return Convert.ToBase64String(memoryStream.ToArray());
-                }
-            }
-            catch (ServiceException ex)
-            {
-                // Log error for debugging
-                Console.WriteLine($"Error retrieving profile picture: {ex.Message}");
-                return ""; // Return an empty string on error
-            }
-        }
-
+       
     }
 }

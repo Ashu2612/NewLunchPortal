@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './components/login/login.component';
+import { SingupComponent } from './components/singup/singup.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -9,6 +10,7 @@ import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/main-layout', pathMatch: 'full' }, // Default route redirect
+  { path: 'signup', component: SingupComponent },
   { path: 'login', component: LoginComponent },
   {
     path: 'main-layout',

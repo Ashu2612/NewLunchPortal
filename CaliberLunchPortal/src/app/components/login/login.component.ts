@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,7 +10,7 @@ import { UserDTOService } from '../../services/user.dto';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -17,6 +18,7 @@ import { UserDTOService } from '../../services/user.dto';
 export class LoginComponent implements AfterViewInit{
 
   private apiUrl = 'https://localhost:7231';
+  showSignUpModal = false;
 
   constructor(private http: HttpClient, private router: Router, private userDTOService: UserDTOService) {
     // Listen for messages from the popup window after it closes
@@ -25,10 +27,17 @@ export class LoginComponent implements AfterViewInit{
           const data = event.data;
           setTimeout(() => {
               const userData = this.getUserDataFromCookies();
-              if (userData.userName) {
-                userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
-            this.router.navigate(['/main-layout']);
+              if (userData.isAuthenticated === 'true') {
+                if(userData.userExists === 'true'){
+                  userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
+                  this.router.navigate(['/main-layout']);
                   this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192');
+                }else{
+                  this.showSignUpModal = true;
+                }
+              }
+              else{
+                this.showToastAlert(`Login Failed !`, '#ff5b5b');
               }
           }, 500); // Delay to ensure cookies are set before fetching them
       }
@@ -38,7 +47,7 @@ export class LoginComponent implements AfterViewInit{
     const video = document.getElementById('animation-video') as HTMLVideoElement;
     if (video) {
       video.muted = true; // Ensure the video is muted for autoplay
-      video.playbackRate = 2;
+      video.playbackRate = 3;
       video.play().catch((error) => {
         console.error('Autoplay failed:', error);
       });
@@ -78,13 +87,14 @@ export class LoginComponent implements AfterViewInit{
   getUserDataFromCookies(): any {
     let userName = this.getCookie('UserName');
     let userEmail = this.getCookie('UserEmail');
-    let isAuthenticated = 'true';
+    let userExists = this.getCookie('UserExists');
+    let isAuthenticated = this.getCookie('IsAuthenticated');
 
     // Decode the values to handle special characters and spaces
     if (userName) userName = decodeURIComponent(userName);
     if (userEmail) userEmail = decodeURIComponent(userEmail);
 
-    return { isAuthenticated, userName, userEmail };
+    return { isAuthenticated, userName, userEmail, userExists };
 }
 
 getCookie(name: string): string | null {
