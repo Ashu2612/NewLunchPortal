@@ -48,10 +48,9 @@ internal class Program
         {
             options.AddPolicy("AllowAngularApp", policy =>
             {
-                policy.WithOrigins("http://localhost:60472") // Replace with your Angular app's URL
-                      .AllowCredentials() // Allow cookies to be sent
-                      .AllowAnyMethod()
-                      .AllowAnyHeader();
+                policy.AllowAnyOrigin() // Allow all origins
+              .AllowAnyHeader() // Allow all headers
+              .AllowAnyMethod(); // Allow all HTTP methods (GET, POST, etc.)
             });
         });
 

@@ -6,6 +6,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { UserManagementComponent } from './components/user-management/user-management.component';
 import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
@@ -20,7 +21,8 @@ export const routes: Routes = [
       { path: '', component: HomeComponent }, // Default route in main layout
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
-      { path: 'contact', component: ContactComponent }
+      { path: 'contact', component: ContactComponent },
+      { path: 'user-management', component: UserManagementComponent }
     ]
   }
 ];

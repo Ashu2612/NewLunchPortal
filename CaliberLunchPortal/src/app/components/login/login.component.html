@@ -4,21 +4,21 @@
         <div class="signup-container-form">
             <button class="close-btn" (click)="closeModal()">×</button>
     <label class="header-form">New User Sign Up</label>
-<div >
-    <div class="textbox">
-        <label class="label" for="name">Name</label>
-        <input type="text" [value]="newUserName" disabled="true">
+    <div>
+        <div class="textbox">
+          <label class="label" for="name">Name</label>
+          <input type="text" [value]="newUserName" disabled="true">
+        </div>
+        <div class="textbox">
+          <label class="label" for="email">Email</label>
+          <input type="email" [value]="newEmailId" disabled="true">
+        </div>
+        <div class="textbox">
+          <label class="label" for="employee-id">Employee ID</label>
+          <input type="text" id="employee-id" [(ngModel)]="employeeId" placeholder="Enter your employee ID">
+        </div>
       </div>
-      <div class="textbox">
-        <label class="label" for="email">Email</label>
-        <input type="email" [value]="newEmailId" value="" disabled="true">
-      </div>
-      <div class="textbox">
-        <label class="label" for="employee-id">Employee ID</label>
-        <input type="text" id="employee-id" placeholder="Enter your employee ID">
-      </div>
-</div>
-      <button class="sign-up-button">Sign Up</button>
+      <button class="sign-up-button" (click)="insertEmployee()">Sign Up</button>
         </div>
         <div class="signup-container-img">
     <img src="assets/images/4eec348b-2483-40f5-82e9-c8001076c92e.svg" class="image-signup"/>

@@ -1,16 +1,16 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { UserDTOService } from '../../services/user.dto';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HttpClientModule, CommonModule],
+  imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -18,9 +18,11 @@ import { UserDTOService } from '../../services/user.dto';
 export class LoginComponent implements AfterViewInit{
 
   private apiUrl = 'https://localhost:7231';
-  showSignUpModal = true;
+  showSignUpModal = false;
   newUserName = "";
   newEmailId = "";
+  employeeId: string = '';
+
   closeModal(){
     this.showSignUpModal = !this.showSignUpModal;
   }
@@ -28,14 +30,14 @@ export class LoginComponent implements AfterViewInit{
     // Listen for messages from the popup window after it closes
     window.addEventListener('message', (event) => {
       if (event.origin === this.apiUrl) {
-          const data = event.data;
           setTimeout(() => {
+            const data = event.data;
               const userData = this.getUserDataFromCookies();
               if (userData.isAuthenticated === 'true') {
                 this.newUserName = userData.userName;
                 this.newEmailId = userData.userEmail;
+                userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
                 if(userData.userExists === 'true'){
-                  userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
                   this.router.navigate(['/main-layout']);
                   this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192');
                 }else{
@@ -89,18 +91,37 @@ export class LoginComponent implements AfterViewInit{
       console.error('Popup window could not be opened. Please check if popups are blocked.');
     }
   }
+  insertEmployee(): void {
+    var userData = this.userDTOService.getUserData();
+    console.log(userData);
+    const user = {
+      EmployeeId: this.employeeId, // reading from textbox
+      Name: this.newUserName,
+      Email: this.newEmailId, 
+      DiplayPic: userData.userPicture, // reading the user display pic
+      IsAdmin: false //Initially set to normal user
+    };
   
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  
+    this.http.put(`${this.apiUrl}/User/InsertEmployeeDetails`, user, { headers })
+      .subscribe({
+        next: (response) => console.log('API Response:', response),
+        error: (error) => console.error('Error:', error)
+      });
+  }
+
   getUserDataFromCookies(): any {
     let userName = this.getCookie('UserName');
     let userEmail = this.getCookie('UserEmail');
+    let userPicture = this.getCookie('UserPicture');
     let userExists = this.getCookie('UserExists');
     let isAuthenticated = this.getCookie('IsAuthenticated');
-
     // Decode the values to handle special characters and spaces
     if (userName) userName = decodeURIComponent(userName);
     if (userEmail) userEmail = decodeURIComponent(userEmail);
 
-    return { isAuthenticated, userName, userEmail, userExists };
+    return { isAuthenticated, userName, userEmail, userExists, userPicture };
 }
 
 getCookie(name: string): string | null {

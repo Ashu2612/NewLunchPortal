@@ -16,8 +16,8 @@
 .signup-container {
   position: absolute;
   z-index: 2; /* Bring the signup container above the overlay */
-  width: 140vh;
-  height: 75vh;
+  width: 133vh;
+  height: 70vh;
   margin-bottom: 15vh;
   background: #FFFFFFFF; /* White */
   top: 50%;
@@ -33,7 +33,7 @@
 }
 
 .signup-container-form {
-  flex: 3; /* 60% width */
+  flex: 1; /* 60% width */
   padding: 20px; /* Add some padding */
   display: flex;
       justify-content: space-around;
@@ -44,7 +44,7 @@
 }
 
 .signup-container-img {
-  flex: 2; /* 40% of the container width */
+  flex: 1; /* 40% of the container width */
   background: #636AE8FF; /* Primary-500 */
   align-items: center; /* Center content vertically */
 }

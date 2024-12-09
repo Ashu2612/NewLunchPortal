@@ -22,7 +22,7 @@
           </a>
         </li>
         <li>
-          <a (click)="toggleRequestDropdown()" style="cursor:pointer;">
+          <a (click)="toggleRequestDropdown()" style="width: 10px;">
             <span class="material-symbols-outlined">inventory</span>
             <span *ngIf="!isSidebarCollapsed">Request</span>
             <span
@@ -122,7 +122,7 @@
               </a>
             </li>
             <li>
-              <a routerLink="submenu2" routerLinkActive="active">
+              <a routerLink="user-management" routerLinkActive="active">
                 <span class="material-symbols-outlined">manage_accounts</span>
                 <span *ngIf="!isSidebarCollapsed">User Management</span>
               </a>

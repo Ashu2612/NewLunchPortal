@@ -16,6 +16,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Graph" Version="5.63.0" />
     <PackageReference Include="Microsoft.Identity.Client" Version="4.66.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>

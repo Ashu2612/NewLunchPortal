@@ -13,8 +13,8 @@ namespace CaliberLunchPortalAPI.DBContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Specify that UsersModel does not have a primary key
-            modelBuilder.Entity<UsersModel>().HasNoKey();
+            modelBuilder.Entity<Users>().HasKey(e => e.Id);
         }
-        public DbSet<UsersModel> UsersModel { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }
