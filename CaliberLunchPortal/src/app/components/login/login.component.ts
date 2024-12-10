@@ -104,9 +104,10 @@ export class LoginComponent implements AfterViewInit{
   
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   
-    this.http.put(`${this.apiUrl}/User/InsertEmployeeDetails`, user, { headers })
+    this.http.put(`${this.apiUrl}/Users/InsertEmployeeDetails`, user, { headers })
       .subscribe({
-        next: (response) => console.log('API Response:', response),
+        next: (response) =>  { this.router.navigate(['/main-layout']),
+          this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192')},
         error: (error) => console.error('Error:', error)
       });
   }

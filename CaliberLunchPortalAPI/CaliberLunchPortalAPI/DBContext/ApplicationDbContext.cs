@@ -16,5 +16,6 @@ namespace CaliberLunchPortalAPI.DBContext
             modelBuilder.Entity<Users>().HasKey(e => e.Id);
         }
         public DbSet<Users> Users { get; set; }
+        public DbSet<ChatMessage> ChatMessages { get; set; }
     }
 }

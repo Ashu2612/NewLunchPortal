@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { UserManagementComponent } from './components/user-management/user-management.component';
+import { AdminChatComponent } from './components/admin-chat/admin-chat.component';
 import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
@@ -22,7 +23,8 @@ export const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'user-management', component: UserManagementComponent }
+      { path: 'user-management', component: UserManagementComponent },
+      { path: 'admin-chat', component: AdminChatComponent }
     ]
   }
 ];

@@ -6,7 +6,7 @@ namespace CaliberLunchPortalAPI.Utilities
 {
     public interface IGraphAPICalls
     {
-        Task<string> GetUserPicAsync();
+        Task<string> GetUserPicAsync(string email);
     }
 
     public class GraphAPICalls : IGraphAPICalls
@@ -18,7 +18,7 @@ namespace CaliberLunchPortalAPI.Utilities
             _configuration = configuration;
         }
 
-        public async Task<string> GetUserPicAsync()
+        public async Task<string> GetUserPicAsync(string email)
         {
             // Read credentials from appsettings
             var clientId = _configuration["Authentication:Microsoft:ClientId"];
@@ -33,7 +33,7 @@ namespace CaliberLunchPortalAPI.Utilities
             try
             {
                 // Get profile picture for the specified user
-                var photoStream = await graphClient.Users["ashutosh.bs@caliberuniversal.com"].Photo.Content.GetAsync();
+                var photoStream = await graphClient.Users[email].Photo.Content.GetAsync();
 
                 if (photoStream == null)
                 {

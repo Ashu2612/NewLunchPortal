@@ -28,7 +28,7 @@ internal class Program
             options.CorrelationCookie.SameSite = SameSiteMode.None;
         });
         builder.Services.AddDistributedMemoryCache();
-
+        builder.Services.AddSignalR();
         builder.Services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromHours(1); // Session will expire after 1 hour of inactivity
@@ -73,7 +73,7 @@ internal class Program
         app.UseAuthorization();
 
         app.MapControllers();
-
+        app.MapHub<ChatHub>("/chatHub");
         app.Run();
     }
 }
