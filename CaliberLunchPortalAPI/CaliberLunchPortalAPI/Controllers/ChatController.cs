@@ -1,5 +1,6 @@
 ﻿using CaliberLunchPortalAPI.DBContext;
 using CaliberLunchPortalAPI.Models;
+using CaliberLunchPortalAPI.Hubs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;

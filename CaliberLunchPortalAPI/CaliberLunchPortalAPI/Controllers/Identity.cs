@@ -45,6 +45,9 @@ namespace CaliberLunchPortalAPI.Controllers
                 string userEmail = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
                 var userExists = await _context.Users.AnyAsync(user => user.Email == userEmail);
                 var base64Picture = await _graphAPICalls.GetUserPicAsync(userEmail);
+                var accessToken = await _graphAPICalls.GetAccessTokenAsync(userEmail);
+
+
 
                 // Store session data in cookies
                 Response.Cookies.Append("UserName", userName, new CookieOptions
@@ -78,13 +81,14 @@ namespace CaliberLunchPortalAPI.Controllers
 
 
 
-                    var script = $@"
+                var script = $@"
 <script>
     if (window.opener) {{
         window.opener.postMessage({{
             IsAuthenticated:  {User.Identity.IsAuthenticated.ToString().ToLower()},
             UserName: '{userName}',
-            UserEmail: '{userEmail}', 
+            UserEmail: '{userEmail}',       
+            Token: '{accessToken}',
             UserExists: '{userExists.ToString().ToLower()}',
             UserPicture: '{base64Picture}'
         }}, '*');

@@ -34,6 +34,7 @@ export class LoginComponent implements AfterViewInit{
             const data = event.data;
               const userData = this.getUserDataFromCookies();
               if (userData.isAuthenticated === 'true') {
+                localStorage.setItem('email', data.UserEmail);
                 this.newUserName = userData.userName;
                 this.newEmailId = userData.userEmail;
                 userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);

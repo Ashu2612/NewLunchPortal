@@ -1,5 +1,6 @@
 using CaliberLunchPortalAPI.DBContext;
 using CaliberLunchPortalAPI.Utilities;
+using CaliberLunchPortalAPI.Hubs;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.MicrosoftAccount;
 using Microsoft.EntityFrameworkCore;
@@ -48,9 +49,10 @@ internal class Program
         {
             options.AddPolicy("AllowAngularApp", policy =>
             {
-                policy.AllowAnyOrigin() // Allow all origins
-              .AllowAnyHeader() // Allow all headers
-              .AllowAnyMethod(); // Allow all HTTP methods (GET, POST, etc.)
+               policy.WithOrigins("http://localhost:4200") // Allow your Angular app's URL
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // This is crucial for SignalR
             });
         });
 
