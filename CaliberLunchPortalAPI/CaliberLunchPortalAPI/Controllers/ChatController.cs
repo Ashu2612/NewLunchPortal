@@ -29,13 +29,17 @@ namespace CaliberLunchPortalAPI.Controllers
                 ReceiverId = messageDto.ReceiverId,
                 Message = messageDto.Message
             };
+            try
+            {
+                _context.ChatMessages.Add(message);
+                await _context.SaveChangesAsync();
 
-            _context.ChatMessages.Add(message);
-            await _context.SaveChangesAsync();
-
+            }
+            catch { }
+            
             // Notify receiver
             await _hubContext.Clients.User(messageDto.ReceiverId.ToString())
-                .SendAsync("ReceiveMessage", messageDto.SenderId, messageDto.Message);
+                .SendAsync("broadcastMessage", messageDto.SenderId.ToString(), messageDto.Message);
 
             return Ok(message);
         }

@@ -39,8 +39,6 @@ export class AdminChatComponent implements OnInit {
   }
 
   loadChatHistory(userId: number): void {
-    this.chatService.getChatHistory(userId, 3).subscribe(history => {
-      this.chatHistory = history;
-    });
+
   }
 }

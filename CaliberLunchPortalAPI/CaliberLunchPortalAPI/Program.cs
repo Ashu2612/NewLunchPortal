@@ -29,7 +29,12 @@ internal class Program
             options.CorrelationCookie.SameSite = SameSiteMode.None;
         });
         builder.Services.AddDistributedMemoryCache();
-        builder.Services.AddSignalR();
+        builder.Services.AddSignalR().AddHubOptions<ChatHub>(options =>
+        {
+            options.EnableDetailedErrors = true;
+            options.KeepAliveInterval = TimeSpan.FromSeconds(15); // Default is 15 seconds
+            options.ClientTimeoutInterval = TimeSpan.FromSeconds(30); // Default is 30 seconds
+        });
         builder.Services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromHours(1); // Session will expire after 1 hour of inactivity
@@ -49,7 +54,7 @@ internal class Program
         {
             options.AddPolicy("AllowAngularApp", policy =>
             {
-               policy.WithOrigins("http://localhost:4200") // Allow your Angular app's URL
+               policy.WithOrigins("http://10.20.57.92:52505") // Allow your Angular app's URL
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials(); // This is crucial for SignalR

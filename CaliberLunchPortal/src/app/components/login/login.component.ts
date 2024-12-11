@@ -17,7 +17,7 @@ import { UserDTOService } from '../../services/user.dto';
 
 export class LoginComponent implements AfterViewInit{
 
-  private apiUrl = 'https://localhost:7231';
+  private apiUrl = 'https://10.20.57.92:7231';
   showSignUpModal = false;
   newUserName = "";
   newEmailId = "";
@@ -31,16 +31,17 @@ export class LoginComponent implements AfterViewInit{
     window.addEventListener('message', (event) => {
       if (event.origin === this.apiUrl) {
           setTimeout(() => {
-            const data = event.data;
-              const userData = this.getUserDataFromCookies();
-              if (userData.isAuthenticated === 'true') {
-                localStorage.setItem('email', data.UserEmail);
-                this.newUserName = userData.userName;
-                this.newEmailId = userData.userEmail;
-                userDTOService.storeUserData(userData.userName, userData.userEmail, userData.isAuthenticated, data.UserPicture);
-                if(userData.userExists === 'true'){
+            const userData = event.data;
+            console.log(userData);
+              if (userData.IsAuthenticated) {
+                console.log('came here');
+                this.newUserName = userData.UserName;
+                this.newEmailId = userData.UserEmail;
+                userDTOService.storeUserData(userData.UserName, userData.UserEmail, userData.IsAuthenticated, userData.UserPicture);
+                if(userData.UserExists){
+                  localStorage.setItem('employeeId', userData.EmployeeId);
                   this.router.navigate(['/main-layout']);
-                  this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192');
+                  this.showToastAlert(`Logged in as ${userData.UserName}`, '#5ad192');
                 }else{
                   this.showSignUpModal = true;
                 }
@@ -108,6 +109,7 @@ export class LoginComponent implements AfterViewInit{
     this.http.put(`${this.apiUrl}/Users/InsertEmployeeDetails`, user, { headers })
       .subscribe({
         next: (response) =>  { this.router.navigate(['/main-layout']),
+          localStorage.setItem('employeeId', this.employeeId),
           this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192')},
         error: (error) => console.error('Error:', error)
       });

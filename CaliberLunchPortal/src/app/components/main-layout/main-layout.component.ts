@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from '../../guards/auth.guard';
 import { UserDTOService } from '../../services/user.dto';
 import { ChatService } from '../../services/chat.service';
+import * as signalR from '@microsoft/signalr';
 
 @Component({
   selector: 'app-main-layout',
@@ -14,6 +15,9 @@ import { ChatService } from '../../services/chat.service';
   styleUrl: './main-layout.component.css'
 })
 export class MainLayoutComponent implements OnInit {
+  private hubConnection!: signalR.HubConnection;
+  messages: { user: string; text: string }[] = [];
+  message: string = '';
   userPicture: string = ''; 
   userName: string = ''; 
   userEmail: string = ''; 
@@ -32,13 +36,39 @@ export class MainLayoutComponent implements OnInit {
     this.userEmail = this.formatString(userDto.userEmail || '');
   }
 
-  ngOnInit(): void {
-    // Start the SignalR connection and listen for incoming messages
-    this.chatService.startConnection();
-    this.chatService.addReceiveMessageListener((senderId, message) => {
-      this.chatMessages.push({ text: message, isSent: false });
+ ngOnInit(): void {
+  this.startConnection();
+  this.addMessageListener();
+  }
+  private startConnection(): void {
+    this.hubConnection = new signalR.HubConnectionBuilder()
+      .withUrl('https://10.20.57.92:7231/chatHub') // Replace with your backend URL
+      .configureLogging(signalR.LogLevel.Trace)
+      .build();
+
+    this.hubConnection
+      .start()
+      .then(() => console.log('SignalR Connected'))
+      .catch((err) => console.error('SignalR Connection Error: ', err));
+  }
+
+  private addMessageListener(): void {
+    this.hubConnection.on('ReceiveMessage', (user, text) => {
+      console.log(text);
+      this.messages.push({ user, text });
     });
   }
+
+  sendMessage(): void {
+    if (this.message.trim()) {
+      console.log('Here');
+      this.hubConnection
+        .invoke('SendMessage', this.userName, this.message)
+        .catch((err) => console.error(err));
+      this.message = '';
+    }
+  }
+
 
   private formatString(input: string): string {
     if (input.length > 17) {
@@ -71,19 +101,6 @@ export class MainLayoutComponent implements OnInit {
     this.isChatWindowOpen = !this.isChatWindowOpen;
   }
 
-  sendMessage(): void {
-    if (!this.newMessage.trim()) return;
-
-    // Add the message to the chat window
-    this.chatMessages.push({ text: this.newMessage, isSent: true });
-
-    // Send the message via ChatService
-    this.chatService.sendMessage(7, 3, this.newMessage).subscribe(() => {
-      console.log('Message sent successfully');
-    });
-
-    this.newMessage = '';
-  }
 
   LogOut(){
     this.authGuard.logOut();
