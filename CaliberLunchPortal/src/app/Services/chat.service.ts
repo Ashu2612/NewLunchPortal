@@ -9,13 +9,14 @@ export class ChatService {
 
   public startConnection(): void {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('https://10.20.57.92:7231/chatHub')
+      .withUrl('https://10.20.57.92:7231/chatHub') // Replace with your backend URL
+      .configureLogging(signalR.LogLevel.Trace)
       .build();
 
     this.hubConnection
       .start()
-      .then(() => console.log('Connection started'))
-      .catch(err => console.log('Error while starting connection: ' + err));
+      .then(() => console.log('SignalR Connected'))
+      .catch((err) => console.error('SignalR Connection Error: ', err));
   }
 
   public addReceiveMessageListener(callback: (user: string, message: string) => void): void {

@@ -7,6 +7,7 @@ using Microsoft.Graph;
 using CaliberLunchPortalAPI.DBContext;
 using CaliberLunchPortalAPI.Utilities;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 
 namespace CaliberLunchPortalAPI.Controllers
 {
@@ -47,7 +48,7 @@ namespace CaliberLunchPortalAPI.Controllers
                 var base64Picture = await _graphAPICalls.GetUserPicAsync(userEmail);
                 var employee = await _context.Users.FirstOrDefaultAsync(e => e.Email == userEmail);
                 var employeeId = employee?.EmployeeId;
-
+                var isAdmin = employee?.IsAdmin;
 
                 // Store session data in cookies
                 Response.Cookies.Append("UserName", userName, new CookieOptions
@@ -79,13 +80,14 @@ namespace CaliberLunchPortalAPI.Controllers
                     Expires = DateTimeOffset.UtcNow.AddSeconds(20)
                 });
 
-
+                HttpContext.Session.SetString("email", userEmail);
 
                 var script = $@"
 <script>
     if (window.opener) {{
         window.opener.postMessage({{
-            IsAuthenticated:  {User.Identity.IsAuthenticated.ToString().ToLower()},
+            IsAuthenticated:  {User.Identity.IsAuthenticated.ToString().ToLower()},   
+            IsAdmin:  {isAdmin.ToString().ToLower()},
             UserName: '{userName}',         
             EmployeeId: '{employeeId}',
             UserEmail: '{userEmail}', 

@@ -1,65 +1,98 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using CaliberLunchPortalAPI.DBContext;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
 
 namespace CaliberLunchPortalAPI.Hubs
 {
     public class ChatHub : Hub
     {
-        public async Task SendMessage(string user, string message)
+        private readonly ApplicationDbContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        private static readonly Dictionary<string, string> UserConnections = new Dictionary<string, string>();
+
+        public ChatHub(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
         {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
+            _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
+
+        // Send a message to all connected admins
+        public async Task SendMessageToAdmins(string fromUser, string message)
+        {
+            var admins = await _context.Users
+                .Where(u => u.IsAdmin)
+                .Select(u => u.Email)
+                .ToListAsync();
+
+            var user = await _context.Users
+    .Where(u => u.Email == fromUser)
+    .Select(u => u.Name)
+    .ToListAsync();
+
+            foreach (var adminEmail in admins)
+            {
+                if (UserConnections.TryGetValue(adminEmail, out string adminConnectionId))
+                {
+                    await Clients.Client(adminConnectionId).SendAsync("ReceiveMessage", user, message);
+                }
+            }
+
+            // Send the message back to the sender for confirmation (once)
+            if (UserConnections.TryGetValue(fromUser, out string senderConnectionId))
+            {
+                await Clients.Client(senderConnectionId).SendAsync("ReceiveMessage", "You", message);
+            }
+        }
+
+        // Send a message to a specific user (from an admin)
+        public async Task SendMessageToUser(string toUser, string fromAdmin, string message)
+        {
+            var admin = await _context.Users
+.Where(u => u.Email == fromAdmin)
+.Select(u => u.Name)
+.ToListAsync();
+
+            if (UserConnections.TryGetValue(toUser, out string userConnectionId))
+            {
+                await Clients.Client(userConnectionId).SendAsync("ReceiveMessage", admin, message);
+            }
+
+            // Optional confirmation to admin
+            if (UserConnections.TryGetValue(fromAdmin, out string adminConnectionId))
+            {
+                await Clients.Client(adminConnectionId).SendAsync("ReceiveMessage", "You", message);
+            }
+        }
+
         public override async Task OnConnectedAsync()
         {
-            // Log connection information
             string connectionId = Context.ConnectionId;
-            string user = Context.User?.Identity?.Name ?? "Anonymous";
-            System.Console.WriteLine($"Client connected: ConnectionId={connectionId}, User={user}");
+            string userEmail = Context.GetHttpContext()?.Request.Query["emailId"];
 
-            // Optionally add the connection to a group
-            await Groups.AddToGroupAsync(connectionId, "DefaultGroup");
+            if (!string.IsNullOrEmpty(userEmail))
+            {
+                UserConnections[userEmail] = connectionId;
+            }
 
-            // Notify other clients about the new connection
-            await Clients.Others.SendAsync("UserConnected", user);
+            Console.WriteLine($"Client connected: {userEmail} with ConnectionId: {connectionId}");
 
-            // Continue with the default behavior
             await base.OnConnectedAsync();
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
-            // Handle disconnection logic if needed
             string connectionId = Context.ConnectionId;
-            System.Console.WriteLine($"Client disconnected: ConnectionId={connectionId}");
 
-            // Optionally remove the connection from groups
-            await Groups.RemoveFromGroupAsync(connectionId, "DefaultGroup");
-
-            // Notify other clients about the disconnection
-            await Clients.Others.SendAsync("UserDisconnected", Context.User?.Identity?.Name ?? "Anonymous");
+            var userEmail = UserConnections.FirstOrDefault(x => x.Value == connectionId).Key;
+            if (userEmail != null)
+            {
+                UserConnections.Remove(userEmail);
+                Console.WriteLine($"Client disconnected: {userEmail} with ConnectionId: {connectionId}");
+            }
 
             await base.OnDisconnectedAsync(exception);
         }
-
-        //public override async Task OnConnectedAsync()
-        //{
-        //    var employeeId = Context.GetHttpContext()?.Request.Query["employeeId"];
-        //    if (!string.IsNullOrEmpty(employeeId))
-        //    {
-        //        // Map the email to the connection ID
-        //        await Groups.AddToGroupAsync(Context.ConnectionId, employeeId);
-        //    }
-        //    await base.OnConnectedAsync();
-        //}
-        //public override async Task OnDisconnectedAsync(Exception? exception)
-        //{
-        //    var employeeId = Context.GetHttpContext()?.Request.Query["employeeId"];
-        //    if (!string.IsNullOrEmpty(employeeId))
-        //    {
-        //        // Remove the connection from the group on disconnect
-        //        await Groups.RemoveFromGroupAsync(Context.ConnectionId, employeeId);
-        //    }
-        //    await base.OnDisconnectedAsync(exception);
-        //}
-
     }
+
 }

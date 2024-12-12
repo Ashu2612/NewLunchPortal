@@ -32,13 +32,11 @@ export class LoginComponent implements AfterViewInit{
       if (event.origin === this.apiUrl) {
           setTimeout(() => {
             const userData = event.data;
-            console.log(userData);
               if (userData.IsAuthenticated) {
-                console.log('came here');
                 this.newUserName = userData.UserName;
                 this.newEmailId = userData.UserEmail;
-                userDTOService.storeUserData(userData.UserName, userData.UserEmail, userData.IsAuthenticated, userData.UserPicture);
-                if(userData.UserExists){
+                userDTOService.storeUserData(userData.UserName, userData.UserEmail, userData.IsAuthenticated, userData.UserPicture, userData.IsAdmin);
+                if(userData.UserExists === "true"){
                   localStorage.setItem('employeeId', userData.EmployeeId);
                   this.router.navigate(['/main-layout']);
                   this.showToastAlert(`Logged in as ${userData.UserName}`, '#5ad192');
