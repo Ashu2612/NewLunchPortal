@@ -1,1 +1,559 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body, html {
+    height: 100%; /* Ensure body and html take the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height to ensure footer sticks to the bottom */
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 10%;
+}
+section {
+    height: 60vh;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex: 1; /* Make section take up available space */
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #f8f8f8; /* Optional: Adds a background color to footer */
+}
+.header-top-left{
+    font-size: 20px;
+ }
+ .header-top-right{
+     font-size: medium;
+ }
+ /* Style the button similar to the anchor tag */
+.comLogbtn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px; 
+  transition: background-color 0.3s ease;
+}
+  
+.comLogbtn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Optional: adjust the logo and text spacing */
+.comLogbtn img {
+  margin-right: 10px;
+}
+
+.comLogbtn .font-size-17 {
+  font-size: 15 px;
+}
+
+/* General container styles */
+.container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevents scrollbars */
+  margin: 0;
+  padding: 0;
+}
+/* Layout structure */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Submenu Styles */
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  display: block;
+  margin: 10px;
+  background-color: #FFFFFFFF;
+}
+
+.submenu li a {
+  padding: 8px 20px;
+  color: #ddd;
+}
+
+.submenu li a:hover {
+  background-color: #f7f9ff;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background-color: #FFFFFFFF;
+  border: none;
+  color: #4f5e6d;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #f7f9ff;
+  border-radius: 5px;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+/* Main Content styling */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #FFFFFFFF;
+  overflow-y: auto;
+}
+
+/* Header styles */
+.header {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  top: 10px;
+}
+
+.header-logo img {
+  max-width: 150px; /* Adjust logo width */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-logo img:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.button-secondary {
+  background-color: #ffffff;
+  border: 1px solid #cfd9e2;
+  padding: 10px 20px;
+  color: #6682fb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  border: 1px solid #b3c0fd;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f7f9ff;
+}
+
+/* Main content styles */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden; /* Prevents scrolling for large content */
+}
+
+/* Image styles */
+.image-left{
+  width: 30%;
+  margin-left: -10vh;
+  position: absolute;
+  top: 85%;
+  left: -4%; /* Prevents the image from creating horizontal scroll */
+  transform: translateY(-50%);
+}
+
+.image-right {
+  width: 30%;
+  margin-right: -5vh !important;
+  margin-top: 5vh;
+  position: absolute;
+  top: 70%;
+  right: -1%; /* Prevents the image from creating horizontal scroll */
+  transform: translateY(-50%);
+}
+
+.image-left img,
+.image-right img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 100px); /* Ensures images fit within the viewport */
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 500px;
+  max-height: 300px;
+  margin-bottom: 150px;
+  border-radius: 10px;
+  background-color: #fff; /* Card background color */
+ box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.center-content {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.logo {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#animation-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.welcome-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.button-primary {
+  background-color: #6682fb;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #5870db;
+}
+
+
+.primary-button {
+    width: 89px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.13px;
+   
+  }
+  .slim-toast {
+   height: 10px !important; /*  Set height */
+    line-height: 0px; /* Ensure content aligns vertically */
+    padding: 0px; /* Adjust padding for content */
+   
+    display: flex;
+    justify-content: center;
+  }
+  .buttonsecondary {
+    width: 120px;
+    height: 36px;
+    margin: 30px 30px 14px 0;
+    padding: 10px 29px 10px 28px;
+    border-radius: 4px;
+    border: solid 1px #cfd9e2;
+    background-color: var(--white);
+  }
+  .secondary {
+    width: 63px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.13px;
+    color: var(--cornflower);
+  }
+  .top-menu{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .menus-small{
+    font-size: 13px;
+  }
+ /* Sidebar Menu */
+ .side-menu {
+  width: 230px;
+  display: flex;
+  background-color: #FFFFFFFF !important;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  color: #4f5e6d !important;
+  height: 90vh; /* Full screen height */
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Custom Scrollbar */
+.side-menu::-webkit-scrollbar {
+  width: 4px; /* Adjust width of the scrollbar */
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Thumb (scrollbar handle) color */
+  border-radius: 10px; /* Round the corners */
+  border: 2px; /* Optional: padding around the thumb */
+}
+
+
+/* Remove scroll buttons (arrows) */
+.side-menu::-webkit-scrollbar-button {
+  display: none;
+}
+  .side-menu.collapsed {
+    width: 80px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Side Menu List */
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .side-menu ul li {
+    margin: 15px 0;
+    position: relative;
+  }
+  
+  .side-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #4f5e6d !important;
+    font-size: 16px !important;
+    padding: 8px 16px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .side-menu ul li a:hover {
+    background-color: #f7f9ff !important;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  .side-menu ul li a.active {
+    color: #6682fb !important;
+    font-weight: normal !important;
+    background-color: #e1e9fe !important;
+    border-radius: 4px;
+  }
+  /* Icon Styling */
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif !important;
+    font-weight: normal;
+    align-items: center;
+    font-style: normal;
+    font-size: 24px; /* Adjust size as needed */
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+  .material-symbols-outlined-icon {
+    font-family: 'Material Symbols Outlined', sans-serif !important;
+    font-weight: normal;
+    align-items: center;
+    font-style: normal;
+    font-size: 24px; /* Adjust size as needed */
+    line-height: 1;
+    text-transform: none;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+  .side-menu-logo {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 22px;
+    justify-content: space-evenly;
+    margin: 15px;
+  }
+/* Menu Item */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #FFFFFFFF !important; /* Neutral color */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Icon Styling */
+  .menu-item .material-symbols-outlined {
+    font-size: 24px;
+    color: #4f5e6d; /* Icon color */
+  }
+  .menu-item .material-symbols-outlined-icon {
+    font-size: 20px;
+    color: #4f5e6d;
+  }
+  /* Hover Effect */
+  .menu-item:hover {
+    background-color: #f1f3f5;
+    border-radius: 4px;
+  }
+  
+  /* Selected Item */
+  .menu-item.selected {
+    font-weight: bold;
+    color: #4f5e6d !important;
+    background-color: #CED0F8; /* Primary background */
+    border-radius: 4px;
+  }
+  .avatar-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFFFFFFF;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    position: absolute;
+    bottom: 0px;
+    width: auto;
+  }
+  
+  .avatar {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background: #CED0F8FF; /* Light primary background color */
+    border-radius: 22px; /* Make it circular */
+    overflow: hidden;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* User info section */
+  .user-info {
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Allows this section to take up available space */
+    overflow: hidden;
+    bottom: 0px;
+    transition: opacity 0.3s ease, height 0.3s ease;
+    max-width: calc(100% - 70px); /* Ensure that the user info doesn't overflow the container */
+  }
+  
+  .user-info .username,
+  .user-info .email {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    white-space: normal;  /* Allow text to wrap */
+    overflow: hidden;  /* Hide overflowed text */
+    text-overflow: ellipsis;  /* Add ellipsis (...) for overflowed text */
+    word-wrap: break-word; /* Ensure words break properly */
+  }
+  
+  .user-info .username {
+    font-weight: bold;
+    max-width: 100%; /* Allow username to take full width available */
+  }
+  
+  .user-info .email {
+    color: #777;
+    max-width: 100%; /* Allow email to take full width available */
+    margin-top: 5px; /* Add some spacing between username and email */
+  }
+  
+  .logout-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #4f5e6d;
+    margin-left: 12px;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .logout-icon:hover {
+    color: #979797; /* Change color on hover */
+    transform: scale(1.05);
+  }
+  
+
+   /* CSS goes here */
+   @keyframes fadeIn {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-delay {
+    opacity: 0;
+    animation: fadeIn .1s ease-in forwards;
+    animation-delay: .1s;
+}

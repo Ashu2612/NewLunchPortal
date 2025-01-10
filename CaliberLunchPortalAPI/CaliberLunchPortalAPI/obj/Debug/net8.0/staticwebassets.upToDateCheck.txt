@@ -1,0 +1,4 @@
+wwwroot\index.html
+wwwroot\lib\signalr.js
+wwwroot\lib\signalr.min.js
+wwwroot\lib\third-party-notices.txt

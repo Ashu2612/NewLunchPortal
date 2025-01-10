@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+      "PackagePath": "staticwebassets\\lib\\signalr.js"
+    },
+    {
+      "Id": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.min.js",
+      "PackagePath": "staticwebassets\\lib\\signalr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\third-party-notices.txt",
+      "PackagePath": "staticwebassets\\lib\\third-party-notices.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CaliberLunchPortalAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CaliberLunchPortalAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CaliberLunchPortalAPI.props",
+      "PackagePath": "build\\CaliberLunchPortalAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CaliberLunchPortalAPI.props",
+      "PackagePath": "buildMultiTargeting\\CaliberLunchPortalAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CaliberLunchPortalAPI.props",
+      "PackagePath": "buildTransitive\\CaliberLunchPortalAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,334 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "index.html",
+      "AssetFile": "index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:42:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48="
+        }
+      ]
+    },
+    {
+      "Route": "index.wnwtadyhzg.html",
+      "AssetFile": "index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:42:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wnwtadyhzg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48="
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.js",
+      "AssetFile": "lib/signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "283814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.min.js",
+      "AssetFile": "lib/signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.min.maego1ciax.js",
+      "AssetFile": "lib/signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "maego1ciax"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/signalr.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.y0yyj9yq3e.js",
+      "AssetFile": "lib/signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "283814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y0yyj9yq3e"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/signalr.js"
+        }
+      ]
+    },
+    {
+      "Route": "lib/third-party-notices.txt",
+      "AssetFile": "lib/third-party-notices.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14637"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U="
+        }
+      ]
+    },
+    {
+      "Route": "lib/third-party-notices.wtygp84ibg.txt",
+      "AssetFile": "lib/third-party-notices.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14637"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wtygp84ibg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/third-party-notices.txt"
+        }
+      ]
+    }
+  ]
+}

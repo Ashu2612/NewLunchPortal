@@ -1,0 +1,434 @@
+{
+  "Version": 1,
+  "Hash": "O62NLWGlMQ2xLVqu/l6mgb+NHLrYYiCA7oDJRYLABzs=",
+  "Source": "CaliberLunchPortalAPI",
+  "BasePath": "_content/CaliberLunchPortalAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CaliberLunchPortalAPI\\wwwroot",
+      "Source": "CaliberLunchPortalAPI",
+      "ContentRoot": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\",
+      "BasePath": "_content/CaliberLunchPortalAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\index.html",
+      "SourceId": "CaliberLunchPortalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\",
+      "BasePath": "_content/CaliberLunchPortalAPI",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wnwtadyhzg",
+      "Integrity": "nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+      "SourceId": "CaliberLunchPortalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\",
+      "BasePath": "_content/CaliberLunchPortalAPI",
+      "RelativePath": "lib/signalr#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y0yyj9yq3e",
+      "Integrity": "wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\signalr.js"
+    },
+    {
+      "Identity": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.min.js",
+      "SourceId": "CaliberLunchPortalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\",
+      "BasePath": "_content/CaliberLunchPortalAPI",
+      "RelativePath": "lib/signalr.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "maego1ciax",
+      "Integrity": "oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\signalr.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\third-party-notices.txt",
+      "SourceId": "CaliberLunchPortalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\",
+      "BasePath": "_content/CaliberLunchPortalAPI",
+      "RelativePath": "lib/third-party-notices#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wtygp84ibg",
+      "Integrity": "VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\third-party-notices.txt"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:42:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48="
+        }
+      ]
+    },
+    {
+      "Route": "index.wnwtadyhzg.html",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:42:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wnwtadyhzg"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48="
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.js",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "283814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.min.js",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.min.maego1ciax.js",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "maego1ciax"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/signalr.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oldPX4RLCduNc1YJpKFCefX93r8wLbV+wjfwUPapAzI="
+        }
+      ]
+    },
+    {
+      "Route": "lib/signalr.y0yyj9yq3e.js",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "283814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y0yyj9yq3e"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/signalr.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wjftnWOkmFYw+gm+Kz93d9hJHdarGCt/iyVXnhf8GZc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/third-party-notices.txt",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\third-party-notices.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14637"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U="
+        }
+      ]
+    },
+    {
+      "Route": "lib/third-party-notices.wtygp84ibg.txt",
+      "AssetFile": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\third-party-notices.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14637"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 12:36:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wtygp84ibg"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/third-party-notices.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U="
+        }
+      ]
+    }
+  ]
+}

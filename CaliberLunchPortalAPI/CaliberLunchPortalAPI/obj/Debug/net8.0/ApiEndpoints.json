@@ -1,0 +1,127 @@
+[
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.ChatController",
+    "Method": "GetChatHistory",
+    "RelativePath": "api/chat/history/{userId}/{adminId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "adminId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/chat/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messageDto",
+        "Type": "CaliberLunchPortalAPI.Models.ChatMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.Identity",
+    "Method": "ClosePopp",
+    "RelativePath": "Identity/ClosePopp",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.Identity",
+    "Method": "LoginWithMicrosoftAccount",
+    "RelativePath": "Identity/LoginWithMicrosoftAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.Identity",
+    "Method": "UserDTO",
+    "RelativePath": "Identity/UserDTO",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.SessionController",
+    "Method": "GetSessionData",
+    "RelativePath": "Session/get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.SessionController",
+    "Method": "SetSessionData",
+    "RelativePath": "Session/set",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.UsersController",
+    "Method": "GetEmployeesDetails",
+    "RelativePath": "Users/GetEmployeesDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CaliberLunchPortalAPI.Controllers.UsersController",
+    "Method": "InsertEmployeeDetails",
+    "RelativePath": "Users/InsertEmployeeDetails",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "System.Object",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

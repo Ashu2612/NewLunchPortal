@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="overlay animate-delay" *ngIf="showSignUpModal"></div>
+    <div class="signup-container animate-delay" *ngIf="showSignUpModal">
+        <div class="signup-container-form">
+            <button class="close-btn" (click)="closeModal()">×</button>
+    <label class="header-form">New User Sign Up</label>
+    <div>
+        <div class="textbox">
+          <label class="label" for="name">Name</label>
+          <input type="text" [value]="newUserName" disabled="true">
+        </div>
+        <div class="textbox">
+          <label class="label" for="email">Email</label>
+          <input type="email" [value]="newEmailId" disabled="true">
+        </div>
+        <div class="textbox">
+          <label class="label" for="employee-id">Employee ID</label>
+          <input type="text" id="employee-id" [(ngModel)]="employeeId" placeholder="Enter your employee ID">
+        </div>
+      </div>
+      <button class="sign-up-button" (click)="insertEmployee()">Sign Up</button>
+        </div>
+        <div class="signup-container-img">
+    <img src="assets/images/4eec348b-2483-40f5-82e9-c8001076c92e.svg" class="image-signup"/>
+        </div>
+    </div>
+    <header class="header">
+        <span class="header-logo">
+            <img src="/assets/images/logo_caliber_horizontal.png">
+        </span>
+        <span class="header-login">
+            <button class="button-secondary" (click)="openLoginModal()">Login With Email</button>
+        </span>
+    </header>
+    <section class="main-content">
+        <div class="image-left">
+            <img src="assets/images/c687ce82-306b-4d3d-a597-962cb88b54c2.svg" alt="Illustration 1">
+        </div>
+        <div class="card-container">
+            <div class="center-content">
+                <div class="logo">
+                    <video #animationVideo id="animation-video" autoplay muted playsinline disablePictureInPicture="true">
+                        <source src="assets/animations/logo_animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="welcome-text">Welcome! Please log in to continue.</div>
+                <button class="btn btn-white mt-4 border comLogbtn px-2 py-2 mt-5" (click)="openLoginModal()">
+                    <span class="px-2 pb-1px">
+                        <img src="/assets/images/microsoft.png" width="20" height="20" alt="Microsoft Logo">
+                    </span>
+                    <span class="px-1 font-size-17">
+                        Sign-in with Microsoft Account
+                    </span>
+                </button>
+            </div>
+        </div>        
+        <div class="image-right">
+            <img src="assets/images/4cbe70df-55f5-4d92-986b-49fd53afc721.svg" alt="Illustration 2">
+        </div>
+    </section>
+</div>

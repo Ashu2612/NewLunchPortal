@@ -1,0 +1,52 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2684"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:42:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/index.wnwtadyhzg.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wnwtadyhzg"},{"Name":"integrity","Value":"sha256-nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48="},{"Name":"label","Value":"_content/CaliberLunchPortalAPI/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2684"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022nEiF8rNplFE14wVmvP0J1WFvKE3BYWrqEOylNSFzY48=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:42:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/lib/signalr.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\signalr.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wjftnWOkmFYw\u002Bgm\u002BKz93d9hJHdarGCt/iyVXnhf8GZc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"283814"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022wjftnWOkmFYw\u002Bgm\u002BKz93d9hJHdarGCt/iyVXnhf8GZc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:36:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/lib/signalr.min.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\signalr.min.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oldPX4RLCduNc1YJpKFCefX93r8wLbV\u002BwjfwUPapAzI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"132677"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022oldPX4RLCduNc1YJpKFCefX93r8wLbV\u002BwjfwUPapAzI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:36:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/lib/signalr.min.maego1ciax.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\signalr.min.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"maego1ciax"},{"Name":"integrity","Value":"sha256-oldPX4RLCduNc1YJpKFCefX93r8wLbV\u002BwjfwUPapAzI="},{"Name":"label","Value":"_content/CaliberLunchPortalAPI/lib/signalr.min.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"132677"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022oldPX4RLCduNc1YJpKFCefX93r8wLbV\u002BwjfwUPapAzI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:36:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/lib/signalr.y0yyj9yq3e.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\signalr.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y0yyj9yq3e"},{"Name":"integrity","Value":"sha256-wjftnWOkmFYw\u002Bgm\u002BKz93d9hJHdarGCt/iyVXnhf8GZc="},{"Name":"label","Value":"_content/CaliberLunchPortalAPI/lib/signalr.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"283814"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022wjftnWOkmFYw\u002Bgm\u002BKz93d9hJHdarGCt/iyVXnhf8GZc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:36:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/lib/third-party-notices.txt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\third-party-notices.txt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14637"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:36:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CaliberLunchPortalAPI/lib/third-party-notices.wtygp84ibg.txt">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\third-party-notices.txt'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wtygp84ibg"},{"Name":"integrity","Value":"sha256-VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U="},{"Name":"label","Value":"_content/CaliberLunchPortalAPI/lib/third-party-notices.txt"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14637"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022VK25t/BpnWU9dieryshFQLdYwqPoQahB7SziOdnKg/U=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 12:36:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,41 @@
+
+<div style="display: flex; justify-content: space-evenly;">
+  <table>
+<div>
+  <tbody style="display: block; border-left: 2px;">
+    <tr *ngFor="let user of users" (click)="selectUser(user.email)" style="cursor:pointer;">
+      <td>
+        <img
+          *ngIf="user.diplayPic"
+          [src]="'data:image/png;base64,' + user.diplayPic"
+          alt="Profile Picture"
+          width="30"
+          height="30"
+        />
+      </td>
+      <td>{{ user.name }}</td>
+    </tr>
+  </tbody>
+</div>
+  </table>
+  <div>
+    <div class="chat-container">
+      <h1>Chat</h1>
+      <div class="chat-messages">
+        <div *ngFor="let msg of messages">
+          <strong>{{ msg.sender }}:</strong> {{ msg.text }}
+        </div>
+      </div>
+      <div class="chat-input">
+        <input 
+          [(ngModel)]="message"
+          placeholder="Type a message..."
+          (keyup.enter)="sendMessage()"
+        />
+        <button (click)="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
