@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj": {}
+    "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj": {
+    "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj",
         "projectName": "CaliberLunchPortalAPI",
-        "projectPath": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj",
+        "projectPath": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj",
         "packagesPath": "C:\\Users\\ashutosh.bs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\obj\\",
+        "outputPath": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,16 +43,51 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.13.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[5.63.0, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.66.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -78,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

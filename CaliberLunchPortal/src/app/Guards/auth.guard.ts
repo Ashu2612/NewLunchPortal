@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { UserDTOService } from '../services/user.dto';
+import { UserService } from '../services/users/user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private userDTOService: UserDTOService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   canActivate(): boolean {
-    if (this.userDTOService.isAuthenticated()) {
+    if (this.userService.isAuthenticated()) {
       return true;
     } else {
       this.router.navigate(['/login']);
@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
   }
   logOut(): void{
     sessionStorage.clear();
-    this.userDTOService.clearAllCookies();
+    this.userService.clearAllCookies();
     this.router.navigate(['/login']);
   }
 }

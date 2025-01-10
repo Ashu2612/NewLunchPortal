@@ -21,8 +21,12 @@ namespace CaliberLunchPortalAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("CaliberLunchPortalAPI.Models.UsersModel", b =>
+            modelBuilder.Entity("CaliberLunchPortalAPI.Models.Users", b =>
                 {
+                    b.Property<byte[]>("DiplayPic")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
@@ -37,7 +41,7 @@ namespace CaliberLunchPortalAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.ToTable("UsersModel");
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

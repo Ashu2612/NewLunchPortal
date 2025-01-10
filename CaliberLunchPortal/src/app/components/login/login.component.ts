@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { UserDTOService } from '../../services/user.dto';
+import { UserService } from '../../services/users/user.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +26,7 @@ export class LoginComponent implements AfterViewInit{
   closeModal(){
     this.showSignUpModal = !this.showSignUpModal;
   }
-  constructor(private http: HttpClient, private router: Router, private userDTOService: UserDTOService) {
+  constructor(private http: HttpClient, private router: Router, private userService: UserService) {
     // Listen for messages from the popup window after it closes
     window.addEventListener('message', (event) => {
       if (event.origin === this.apiUrl) {
@@ -35,10 +35,15 @@ export class LoginComponent implements AfterViewInit{
               if (userData.IsAuthenticated) {
                 this.newUserName = userData.UserName;
                 this.newEmailId = userData.UserEmail;
-                userDTOService.storeUserData(userData.UserName, userData.UserEmail, userData.IsAuthenticated, userData.UserPicture, userData.IsAdmin);
+                userService.storeUserData(userData.UserName, userData.UserEmail, userData.IsAuthenticated, userData.UserPicture, userData.IsAdmin);
                 if(userData.UserExists === "true"){
-                  localStorage.setItem('employeeId', userData.EmployeeId);
-                  this.router.navigate(['/main-layout']);
+                  debugger;
+                  if(userData.IsAdmin){
+                    this.router.navigate(['/admin-layout']);
+                  }
+                  else{
+                    this.router.navigate(['/main-layout']);
+                  }
                   this.showToastAlert(`Logged in as ${userData.UserName}`, '#5ad192');
                 }else{
                   this.showSignUpModal = true;
@@ -92,7 +97,7 @@ export class LoginComponent implements AfterViewInit{
     }
   }
   insertEmployee(): void {
-    var userData = this.userDTOService.getUserData();
+    var userData = this.userService.getUserData();
     console.log(userData);
     const user = {
       EmployeeId: this.employeeId, // reading from textbox
@@ -107,7 +112,6 @@ export class LoginComponent implements AfterViewInit{
     this.http.put(`${this.apiUrl}/Users/InsertEmployeeDetails`, user, { headers })
       .subscribe({
         next: (response) =>  { this.router.navigate(['/main-layout']),
-          localStorage.setItem('employeeId', this.employeeId),
           this.showToastAlert(`Logged in as ${userData.userName}`, '#5ad192')},
         error: (error) => console.error('Error:', error)
       });

@@ -1,26 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\caliberlunchportalapi\\caliberlunchportalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\caliberlunchportalapi\\caliberlunchportalapi\\controllers\\identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\controllers\\identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\controllers\\identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\caliberlunchportalapi\\caliberlunchportalapi\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\models\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\models\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\caliberlunchportalapi\\caliberlunchportalapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\caliberlunchportalapi\\caliberlunchportalapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\models\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\models\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\wwwroot\\lib\\signalr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\wwwroot\\lib\\signalr.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\dbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\dbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\utilities\\graphapicalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\utilities\\graphapicalls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|c:\\users\\ashutosh.bs\\source\\repos\\newlunchportal\\caliberlunchportalapi\\caliberlunchportalapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E27B00D1-21D2-4643-9EB6-09D7B29E4A00}|CaliberLunchPortalAPI\\CaliberLunchPortalAPI.csproj|solutionrelative:caliberlunchportalapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,16 +70,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 37,
+          "SelectedChildIndex": 44,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -102,10 +134,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -165,67 +193,190 @@
               "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\index.html",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\wwwroot\\index.html",
+              "ViewState": "AgIAABIAAACAmZmZmZkOwAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-10T12:42:18.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "signalr.js",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\wwwroot\\lib\\signalr.js",
+              "ViewState": "AgIAAEAAAAAAmZmZmZkuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-10T12:42:15.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAsAAACAMzMzM7MiwAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T04:43:54.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Models\\ChatMessageDto.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Models\\ChatMessageDto.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Models\\ChatMessageDto.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Models\\ChatMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T04:43:14.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAABcAAAAAzszMzMz+vx0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T04:41:47.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAABAAAACAMzMzM7MQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T11:22:41.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GraphAPICalls.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Utilities\\GraphAPICalls.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Utilities\\GraphAPICalls.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Utilities\\GraphAPICalls.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Utilities\\GraphAPICalls.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T13:35:08.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersModel.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Models\\UsersModel.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Models\\UsersModel.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Models\\UsersModel.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Models\\UsersModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T13:28:58.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\DBContext\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\DBContext\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\DBContext\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\DBContext\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T13:18:48.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABgAAADAzczMzMwIwC4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T12:10:40.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\WeatherForecast.cs",
               "RelativeToolTip": "CaliberLunchPortalAPI\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T11:42:34.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "SessionController.cs",
-              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\SessionController.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\SessionController.cs",
               "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Controllers\\SessionController.cs",
-              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\SessionController.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\SessionController.cs",
               "RelativeToolTip": "CaliberLunchPortalAPI\\Controllers\\SessionController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:44:11.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T09:44:11.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Identity.cs",
-              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\Identity.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\Identity.cs",
               "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Controllers\\Identity.cs",
-              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\Identity.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Controllers\\Identity.cs",
               "RelativeToolTip": "CaliberLunchPortalAPI\\Controllers\\Identity.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCUAAAATAAAA",
+              "ViewState": "AgIAAEEAAAAAAgAAAIAowFkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:15:51.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\appsettings.json",
-              "RelativeToolTip": "CaliberLunchPortalAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-12T07:44:40.757Z"
+              "WhenOpened": "2024-11-12T09:15:51.201Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Program.cs",
-              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Program.cs",
-              "RelativeToolTip": "CaliberLunchPortalAPI\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAswBYAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T06:44:40.153Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\appsettings.json",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-12T07:44:40.757Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Program.cs",
+              "RelativeDocumentMoniker": "CaliberLunchPortalAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ashutosh.bs\\source\\repos\\NewLunchPortal\\CaliberLunchPortalAPI\\CaliberLunchPortalAPI\\Program.cs",
+              "RelativeToolTip": "CaliberLunchPortalAPI\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAD4vzAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T06:44:40.153Z"
             }
           ]
         },
@@ -280,10 +431,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         },
