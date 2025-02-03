@@ -24,6 +24,42 @@
     <img src="assets/images/4eec348b-2483-40f5-82e9-c8001076c92e.svg" class="image-signup"/>
         </div>
     </div>
+    <div class="overlay animate-delay" ></div>
+    <div class="signup-container animate-delay" style="height: 50vh; width: 100vh;">
+        <div class="signup-container-form" style="background-color: white;">
+            <div class="logo" style="width: 450px; height: 250px;">
+                <video #animationVideo id="animation-video" autoplay muted playsinline disablePictureInPicture="true">
+                    <source src="assets/animations/logo_animation.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="signup-container-form" style="gap: 0px;">
+    <label class="header-form">User Sign in</label>
+    <div class="welcome-text">Welcome! Please log in to continue.</div>
+    <div >
+        <div class="textbox">
+          <label class="label" for="name">User Id</label>
+          <input type="text"  [(ngModel)]="userId">
+        </div>
+        <div class="textbox">
+          <label class="label" style="font-family: Arial, Helvetica, sans-serif;" for="email">Password</label>
+          <input type="text" [(ngModel)]="password" >
+        </div>
+      </div>
+      <div>
+        <button class="sign-up-button" (click)="dummyLogin(userId, password)">Sign in</button>
+        <button class="btn btn-white mt-4 border comLogbtn px-2 py-2 mt-5" style="margin-top: 10px; width: 38vh;" (click)="openLoginModal()">
+          <span class="px-2 pb-1px">
+              <img src="/assets/images/microsoft.png" width="20" height="20" alt="Microsoft Logo">
+          </span>
+          <span class="px-1 font-size-17">
+              Sign-in with Microsoft Account
+          </span>
+      </button>
+      </div>
+        </div>
+       
+    </div>
     <header class="header">
         <span class="header-logo">
             <img src="/assets/images/logo_caliber_horizontal.png">

@@ -86,10 +86,10 @@
 .textbox .label {
   display: flex;
   justify-content: start;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 22px;
-  font-weight: 700;
-  width: 200px;
+  font-weight: 100;
+  width: 180px;
   margin: 5px; /* Add spacing below the label */
 }
 .sign-up-button {
@@ -108,6 +108,7 @@
   background: #636AE8FF; /* primary-500 */
   opacity: 1; 
   border: none; 
+  cursor: pointer;
   border-radius: 6px; /* border-m */
 }
 /* Hover */

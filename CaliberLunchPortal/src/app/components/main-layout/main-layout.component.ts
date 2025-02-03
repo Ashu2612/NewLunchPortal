@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AuthGuard } from '../../../guards/auth.guard';
-import { ChatService } from '../../../services/chats/chat.service';
-import { UserService } from '../../../services/users/user.service';
+import { AuthGuard } from '../../guards/auth.guard';
+import { ChatService } from '../../services/chats/chat.service';
+import { UserService } from '../../services/users/user.service';
 import * as signalR from '@microsoft/signalr';
 
 @Component({
@@ -40,8 +40,8 @@ export class MainLayoutComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.startConnection();
-    this.addMessageListener();
+    // this.startConnection();
+    // this.addMessageListener();
   }
   
   private addMessageListener(): void {
@@ -114,6 +114,11 @@ export class MainLayoutComponent implements OnInit {
   isRequestDropdownOpen = false;
   toggleRequestDropdown() {
     this.isRequestDropdownOpen = !this.isRequestDropdownOpen;
+  }
+
+  isDocDropdownOpen = false;
+  toggleDocDropdown() {
+    this.isDocDropdownOpen = !this.isDocDropdownOpen;
   }
 
   isComplaintDropdownOpen = false;

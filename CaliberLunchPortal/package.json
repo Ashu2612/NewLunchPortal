@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/core": "^18.2.14",
     "@angular/animations": "^19.0.3",
     "@angular/common": "^19.0.3",
     "@angular/compiler": "^19.0.3",
@@ -19,6 +20,9 @@
     "@angular/platform-browser-dynamic": "^19.0.3",
     "@angular/router": "^19.0.3",
     "@microsoft/signalr": "^8.0.7",
+    "@syncfusion/ej2-angular-buttons": "^28.2.3",
+    "@syncfusion/ej2-angular-documenteditor": "^28.2.3",
+    "@syncfusion/ej2-material-theme": "~28.2.3",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.14.5",

@@ -44,11 +44,11 @@ namespace CaliberLunchPortalAPI.Controllers
             {
                 string userName = User.Identity.Name;
                 string userEmail = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
-                var userExists = await _context.Users.AnyAsync(user => user.Email == userEmail);
+                var userExists = true;
                 var base64Picture = await _graphAPICalls.GetUserPicAsync(userEmail);
-                var employee = await _context.Users.FirstOrDefaultAsync(e => e.Email == userEmail);
-                var employeeId = employee?.EmployeeId;
-                var isAdmin = employee?.IsAdmin;
+               // var employee = await _context.Users.FirstOrDefaultAsync(e => e.Email == userEmail);
+                var employeeId = 102113;
+                var isAdmin = false;
 
                 // Store session data in cookies
                 Response.Cookies.Append("UserName", userName, new CookieOptions
