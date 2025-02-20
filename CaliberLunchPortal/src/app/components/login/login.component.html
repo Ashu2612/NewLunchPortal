@@ -24,8 +24,7 @@
     <img src="assets/images/4eec348b-2483-40f5-82e9-c8001076c92e.svg" class="image-signup"/>
         </div>
     </div>
-    <div class="overlay animate-delay" ></div>
-    <div class="signup-container animate-delay" style="height: 50vh; width: 100vh;">
+    <div class="signup-container animate-delay" *ngIf="showSignUpModal" style="height: 50vh; width: 100vh;">
         <div class="signup-container-form" style="background-color: white;">
             <div class="logo" style="width: 450px; height: 250px;">
                 <video #animationVideo id="animation-video" autoplay muted playsinline disablePictureInPicture="true">

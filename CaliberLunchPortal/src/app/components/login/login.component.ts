@@ -17,7 +17,7 @@ import { UserService } from '../../services/users/user.service';
 
 export class LoginComponent implements AfterViewInit{
 
-  private apiUrl = 'https://10.60.35.171:8231';
+  private apiUrl = 'http://localhost:5018';
   showSignUpModal = false;
   newUserName = "";
   newEmailId = "";

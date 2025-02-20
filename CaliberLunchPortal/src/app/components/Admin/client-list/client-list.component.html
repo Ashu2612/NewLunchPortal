@@ -1,0 +1,37 @@
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Hostname</th>
+        <th>MAC Address</th>
+        <th>Serial Number</th>
+        <th>IP Address</th>
+        <th>Version</th>
+        <th>Environment</th>
+        <th>Status</th>
+        <th>Registered On</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.hostname }}</td>
+        <td>{{ client.macAddress }}</td>
+        <td>{{ client.serialNumber }}</td>
+        <td>{{ client.ipAddress }}</td>
+        <td>{{ client.version }}</td>
+        <td>{{ client.environmentType }}</td>
+        <td>
+          <span [ngClass]="{
+            'abandoned': client.status === 'Abandoned',
+            'active': client.status === 'Active',
+            'inactive': client.status === 'Inactive'
+          }">
+            {{ client.status }}
+          </span>
+        </td>
+        <td>{{ client.registeredOn | date:'short' }}</td>
+        <td>{{ client.updatedTime | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

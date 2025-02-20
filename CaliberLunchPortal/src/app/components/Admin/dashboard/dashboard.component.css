@@ -1,0 +1,45 @@
+.control-container {
+    padding: 0px !important;
+}
+#gradient-chart stop {
+    stop-color: #2485FA;        
+}
+#gradient-chart1 stop{
+    stop-color: #FEC200;
+} 
+.e-dashboardlayout {
+    padding: 20px;
+    z-index: 0;
+  }
+  .e-panel {
+    cursor: auto !important;
+  }
+  .e-panel-header{
+    border: none !important;
+    height: 50px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #737373;
+  }
+  #control-container {
+    padding: 0px !important;
+}
+.scrollable-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; /* Enables vertical scrolling */
+  cursor: pointer;  /* Indicates it's clickable */
+  padding: -3px; /* Optional padding */
+  border: 1px solid #ccc; /* Optional border */
+  border-radius: 5px; /* Rounded edges */
+}
+
+/* Optional: Change background on hover to indicate click */
+.scrollable-container:hover {
+  background-color: #f5f5f5;
+}

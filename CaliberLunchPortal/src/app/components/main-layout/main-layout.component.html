@@ -22,6 +22,12 @@
             </a>
           </li>
           <li>
+            <a routerLink="client-list" routerLinkActive="active">
+              <span class="material-symbols-outlined">devices</span>
+              <span *ngIf="!isSidebarCollapsed">Client Details</span>
+            </a>
+          </li>
+          <li>
             <a (click)="toggleDocDropdown()">
               <span class="material-symbols-outlined">edit_document</span>
               <span *ngIf="!isSidebarCollapsed">Document Editors</span>
@@ -40,7 +46,7 @@
                 </a>
               </li>
               <li>
-                <a routerLink="submenu4" routerLinkActive="active">
+                <a routerLink="text-control-edito" routerLinkActive="active">
                   <span class="material-symbols-outlined">counter_2</span>
                   <span *ngIf="!isSidebarCollapsed">Text Control Editor</span>
                 </a>

@@ -1,1 +1,92 @@
-<p>dashboard works!</p>
+<div  style="height: 76%; width: 100%; display: flex; ">
+    <ejs-dashboardlayout [columns]='columns'  [allowResizing]='true' [cellSpacing]='cellSpacing' [cellAspectRatio]='cellAspectRatio'>
+      <e-panels>
+        <e-panel [sizeX]='columnSizeX' [sizeY]='columnSizeY' [row]="0" [col]="0">
+          <ng-template #header>
+            <div class="title" id="header1" [innerText]="title"> </div>
+          </ng-template>
+          <ng-template #content>
+            <ejs-chart style='display:block;' [chartArea]='chartArea' [width]='width'
+            [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis' (load)='load($event)' [tooltip]='tooltip' [legendSettings]='legend'>
+            <e-series-collection>
+                <e-series [dataSource]='data' type='Column' xName='Date' yName='Windows' name='Windows' width=2 groupName='DeviceType'
+                columnWidth=0.5 columnSpacing=0.1 [marker]='marker'>
+            </e-series>
+                <e-series [dataSource]='data' type='Column' xName='Date' yName='Android' name='Android' width=2
+                    groupName='DeviceType' columnWidth=0.7 columnSpacing=0.1 [marker]='marker'>
+                </e-series>
+                <e-series [dataSource]='data' type='Column' xName='Date' yName='MacOS' name='MacOS' width=2 groupName='DeviceType'
+                    columnWidth=0.5 columnSpacing=0.1 [marker]='marker'>
+                </e-series>        
+            <e-series [dataSource]='data' type='Column' xName='Date' yName='iOS' name='iOS' width=2 groupName='DeviceType'
+            columnWidth=0.5 columnSpacing=0.1 [marker]='marker'>
+        </e-series>
+                <e-series [dataSource]='data' type='Column' xName='Date' yName='Active' name='Total Active Devices' width=2
+                    groupName='DeviceStatus' columnWidth=0.7 columnSpacing=0.1 [marker]='marker'>
+                </e-series>
+                <e-series [dataSource]='data' type='Column' xName='Date' yName='Abandoned' name='Total Abandoned Devices' width=2
+                    groupName='DeviceStatus' columnWidth=0.5 columnSpacing=0.1 [marker]='marker'>
+                </e-series>
+            </e-series-collection>
+        </ejs-chart>
+          </ng-template>
+        </e-panel>
+       
+        <e-panel [sizeX]='pieSizeX' [sizeY]='pieSizeY' [row]="0" [col]='pieColumn'>
+          <ng-template #header>
+            <div class="title" id="header2">Device Platform Types</div>
+          </ng-template>
+          <ng-template #content>
+            <ejs-accumulationchart id = 'pie' style="height:100%; width:100%" [legendSettings]="pielegendSettings"
+              [tooltip]="pieTooltipSetting" [enableAnimation]='animation'
+              [enableBorderOnMouseMove]='enableBorderOnMouseMove' [enableSmartLabels]='enableSmartLabels'
+              (pointRender)='pointRender($event)' (load)='accumulationload($event)'>
+              <e-accumulation-series-collection>
+                <e-accumulation-series [dataSource]='doughnutChartData' xName='Product' yName='Percentage' innerRadius="40%" radius="75%"
+                 [palettes]="palettes" [dataLabel]="dataLabel" [startAngle]="startAngle" [endAngle]="endAngle" [border]='border'>
+                </e-accumulation-series>
+              </e-accumulation-series-collection>
+            </ejs-accumulationchart>
+          </ng-template>
+        </e-panel>
+        <e-panel [sizeX]='pieSizeX' [sizeY]='1.7' [row]="splineRow" [col]='0'>
+            <ng-template #header>
+              <div class="title" id="header2">Real-Time Client's Status</div>
+            </ng-template>
+            <ng-template #content>
+                <ejs-accumulationchart id="container" #pie style='display:block;  width: 92%' [legendSettings]="legendSettings" [tooltip]="atooltip" (load)='loadPie($event)' [enableAnimation]= 'enableAnimation' [enableBorderOnMouseMove]='false'>
+                    <e-accumulation-series-collection>
+                        <e-accumulation-series name='Browser' [dataSource]='Piedata' xName='Browser' yName='Users' [startAngle]='startAngle1' innerRadius="0%" [radius]="radius" [dataLabel]="dataLabel" [explode]='explode' explodeOffset='10%' [explodeIndex]='0'>
+                        </e-accumulation-series>
+                    </e-accumulation-series-collection>
+                </ejs-accumulationchart>
+            </ng-template>
+          </e-panel>
+          <e-panel routerLink="client-list" [sizeX]='5' [sizeY]='1.7' [row]='splineRow' [col]="3">
+            <ng-template #header>
+              <div class="title" id="header3">Client List</div>
+            </ng-template>
+            <ng-template #content>
+              <!-- Clickable Container to Navigate to client-list -->
+              <div class="scrollable-container" >
+                <app-client-list></app-client-list>
+              </div>
+            </ng-template>
+          </e-panel>
+          
+
+      </e-panels>
+    </ejs-dashboardlayout>
+  </div>
+  <svg style="height: 0">
+    <defs>       
+        <linearGradient id="gradient-chart" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+         <linearGradient id="gradient-chart1" style="opacity: 0.75" class="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0"></stop>
+            <stop offset="1"></stop>
+        </linearGradient>
+    </defs>
+  </svg>

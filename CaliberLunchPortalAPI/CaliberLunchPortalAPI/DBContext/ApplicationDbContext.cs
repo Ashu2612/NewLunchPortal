@@ -14,8 +14,14 @@ namespace CaliberLunchPortalAPI.DBContext
         {
             // Specify that UsersModel does not have a primary key
             modelBuilder.Entity<Users>().HasKey(e => e.Id);
+            modelBuilder.Entity<Client>()
+           .HasIndex(c => c.MacAddress)
+           .IsUnique();
         }
         public DbSet<Users> Users { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Heartbeat> Heartbeats { get; set; }
+        public DbSet<Configuration> Configurations { get; set; }
         public DbSet<ChatMessage> ChatMessages { get; set; }
     }
 }

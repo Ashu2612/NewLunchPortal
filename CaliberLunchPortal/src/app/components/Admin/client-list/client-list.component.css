@@ -1,0 +1,31 @@
+.active {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .inactive {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .abandoned {
+    color: gray;
+    font-weight: bold;
+    text-decoration: line-through;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table thead {
+    background-color: #f8f9fa;
+  }
+  
