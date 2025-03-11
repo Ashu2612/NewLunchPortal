@@ -55,7 +55,7 @@ internal class Program
         {
             options.AddPolicy("AllowAngularApp", policy =>
             {
-               policy.WithOrigins("http://10.20.57.92:4201") // Allow your Angular app's URL
+               policy.WithOrigins("http://localhost:4200") // Allow your Angular app's URL
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials(); // This is crucial for SignalR

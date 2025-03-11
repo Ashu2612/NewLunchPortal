@@ -9,7 +9,6 @@ import { ContactComponent } from './components/Normal/contact/contact.component'
 import { UserManagementComponent } from './components/Admin/user-management/user-management.component';
 import { AdminChatComponent } from './components/Admin/admin-chat/admin-chat.component';
 import { SyncEditoComponent } from './components/DocumentEditor/syncfusion/sync-edito/sync-edito.component';
-import { TextControlEditoComponent } from './components/DocumentEditor/text-control-edito/text-control-edito.component';
 import { DashboardComponent } from './components/Admin/dashboard/dashboard.component';
 import { ClientListComponent } from './components/Admin/client-list/client-list.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -18,6 +17,7 @@ export const routes: Routes = [
   { path: '', redirectTo: '/main-layout', pathMatch: 'full' },
   { path: '', redirectTo: '/admin-layout', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'sync-edito', component: SyncEditoComponent },
   {
     path: 'main-layout',
     component: MainLayoutComponent,
@@ -28,7 +28,6 @@ export const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'client-list', component: ClientListComponent },
       { path: 'sync-edito', component: SyncEditoComponent },
-      { path: 'text-control-edito', component: TextControlEditoComponent },
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent }
     ]

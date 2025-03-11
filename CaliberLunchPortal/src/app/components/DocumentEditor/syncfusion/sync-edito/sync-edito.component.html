@@ -1,4 +1,4 @@
 <div style="margin: 10px;">
-    <ejs-documenteditorcontainer serviceUrl="https://services.syncfusion.com/angular/production/api/documenteditor/" height="93vh"></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer #documenteditor_readonly [enableToolbar]=false serviceUrl="http://localhost:62869/api/documenteditor/" (created)="onCreate()" [restrictEditing]="true" height="96vh"></ejs-documenteditorcontainer>
     </div>
     
